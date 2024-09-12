@@ -2,8 +2,11 @@
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing:border-box; 
+  margin: 0px; 
+  padding: 0px;
 }
+
 
 
 
@@ -20,6 +23,35 @@
 }
 
 
+/*********************/
+/* Logo AT5 Nav */
+/*********************/
+.white{
+	line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    --fixed-color: rgba(0, 0, 0, 0.8);
+    --fixed-bgcolor: rgba(255, 255, 255, 0.8);
+    --fixed-bordercolor: rgba(230, 230, 230, 1);
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: Accord,sans-serif;
+    box-sizing: border-box;
+    fill: #fff;
+}
+
+.red{
+	line-height: 1.15;
+-webkit-text-size-adjust: 100%;
+--fixed-color: rgba(0, 0, 0, 0.8);
+--fixed-bgcolor: rgba(255, 255, 255, 0.8);
+--fixed-bordercolor: rgba(230, 230, 230, 1);
+font-size: 1rem;
+font-weight: 400;
+font-family: Accord,sans-serif;
+box-sizing: border-box;
+fill: #e2212a;
+}
+
 
 
 
@@ -28,4 +60,79 @@
 /****************/
 
 /* jouw code */
+
+
+nav{
+	display: flex;
+	padding: 8px 8px 8px 10px;
+	
+}
+
+nav button{
+	border: none;
+	background: none;
+	width: 4em;
+	font-size: 0.7em;
+	
+}
+
+
+nav svg{
+	height: 1.7em;
+	
+}
+
+h1{
+	margin-right: auto;
+	position: relative;
+}
+ 
+main section:first-child img{
+	width: 100%;
+}
+
+main section:first-child button{
+	display: flex;
+	border: none;
+    cursor: pointer;
+    fill: currentColor;
+    position: absolute;
+	right: 0;
+    color: #fff;
+    width: 4em;
+    height: 4em;
+    padding: 6px 5px 6px 10px;
+    background-color: #e2212a;
+    border-radius: 0 0 0 5px;
+}
+
+
+main section:nth-child(2) {
+	display: flex;
+	justify-content: space-evenly;
+	
+}
+
+main section:nth-child(2) a{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+    padding: .125rem;
+}
+
+section:nth-of-type(2) a:nth-of-type(1) svg {
+	width: 1.6em;
+}
+
+section:nth-of-type(2) a:nth-of-type(2) svg {
+	width: 1.6em;
+	
+}
+
+section:nth-of-type(2) a:nth-of-type(3) svg {
+	width: 1.6em;
+	
+}
+
+
 

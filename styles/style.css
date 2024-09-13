@@ -19,7 +19,10 @@
 :root {
 	/* startje */
 	--color-text:#111;
+	--color-heading: #ffffff;
+	--color-paragraaf: #ffffff;
 	--color-background:#eee;
+	--color-backgroundlabel:#e2212a;
 }
 
 
@@ -56,10 +59,8 @@ fill: #e2212a;
 
 
 /****************/
-/* JOUW STYLING */
+/* head         */
 /****************/
-
-/* jouw code */
 
 
 nav{
@@ -96,8 +97,6 @@ main section:first-child button{
 	border: none;
     cursor: pointer;
     fill: currentColor;
-    position: absolute;
-	right: 0;
     color: #fff;
     width: 4em;
     height: 4em;
@@ -105,6 +104,58 @@ main section:first-child button{
     background-color: #e2212a;
     border-radius: 0 0 0 5px;
 }
+
+
+/****************/
+/* main section1 */
+/****************/
+main section:nth-child(1) a{
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr ;
+	text-decoration: none;
+	
+}
+
+main section:nth-child(1) h2{
+	color: var(--color-heading);
+	grid-row-start: 1;
+	grid-column-start: 1;
+	align-self: end;
+	padding: 1em 0.5em 0.5em;
+	
+}
+
+main section:nth-child(1) p{
+	color: var(--color-paragraaf);
+	background-color: var(--color-backgroundlabel);
+	width: 5em;
+	grid-row-start: 1;
+	grid-column-start: 1;
+	align-self: end;
+	padding: 0.2em 0.7em 0.2em 0.7em;
+	margin-left: 0.7em;
+	border-radius: 3px;
+}
+
+main section:nth-child(1) img{
+	grid-row-start: 1;
+	grid-column-start: 1;
+	z-index: -1;
+}
+
+main section:nth-child(1) button{
+	grid-row-start: 1;
+	grid-column-start: 1;
+	justify-self: end;
+}
+
+
+
+
+/****************/
+/* main section2 */
+/****************/
 
 
 main section:nth-child(2) {
@@ -133,6 +184,8 @@ section:nth-of-type(2) a:nth-of-type(3) svg {
 	width: 1.6em;
 	
 }
+
+
 
 
 

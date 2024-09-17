@@ -5,8 +5,13 @@
   box-sizing:border-box; 
   margin: 0px; 
   padding: 0px;
+  font-family: "accord";
 }
 
+@font-face {
+	font-family: accord;
+	src: url("/Fonts/Accord-Medium.woff") format("woff");
+}
 
 
 
@@ -59,7 +64,7 @@ fill: #e2212a;
 
 
 /****************/
-/* head         */
+/* navigatie    */
 /****************/
 
 
@@ -92,6 +97,10 @@ main section:first-child img{
 	width: 100%;
 }
 
+
+/****************/
+/* main section1 */
+/****************/
 main section:first-child button{
 	display: flex;
 	border: none;
@@ -105,10 +114,6 @@ main section:first-child button{
     border-radius: 0 0 0 5px;
 }
 
-
-/****************/
-/* main section1 */
-/****************/
 main section:nth-child(1) a{
 	display: grid;
 	grid-template-rows: 1fr;
@@ -119,8 +124,7 @@ main section:nth-child(1) a{
 
 main section:nth-child(1) h2{
 	color: var(--color-heading);
-	grid-row-start: 1;
-	grid-column-start: 1;
+	grid-area: 1 / 1;
 	align-self: end;
 	padding: 1em 0.5em 0.5em;
 	
@@ -130,12 +134,12 @@ main section:nth-child(1) p{
 	color: var(--color-paragraaf);
 	background-color: var(--color-backgroundlabel);
 	width: 5em;
-	grid-row-start: 1;
-	grid-column-start: 1;
+	grid-area: 1 / 1;
 	align-self: end;
 	padding: 0.2em 0.7em 0.2em 0.7em;
 	margin-left: 0.7em;
 	border-radius: 3px;
+	margin-bottom: 6.5em;
 }
 
 main section:nth-child(1) img{
@@ -161,7 +165,9 @@ main section:nth-child(1) button{
 main section:nth-child(2) {
 	display: flex;
 	justify-content: space-evenly;
-	
+	padding: 0.8em;
+	margin-bottom: 3em;
+	border-bottom: solid;
 }
 
 main section:nth-child(2) a{
@@ -169,22 +175,113 @@ main section:nth-child(2) a{
 	justify-content: center;
 	align-items: center;
     padding: .125rem;
+	text-decoration: none;
+	color: var(--color-text);
 }
 
 section:nth-of-type(2) a:nth-of-type(1) svg {
 	width: 1.6em;
+	margin-right: 0.9em;
 }
 
 section:nth-of-type(2) a:nth-of-type(2) svg {
 	width: 1.6em;
-	
+	margin-right: 0.9em;
 }
 
 section:nth-of-type(2) a:nth-of-type(3) svg {
 	width: 1.6em;
+	margin-right: 0.9em;
+}
+
+
+
+
+/****************/
+/* main section3*/
+/****************/
+main section:nth-child(3){
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 0.25em;
+}
+
+
+main section:nth-child(3) li{
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto 1fr;
+	padding: 0.4em 0 0.4em 0;
+}
+
+main section:nth-child(3) li img{
+	grid-row-start: 1;
+	grid-row-end: 3;
+	width: 6.56em;
+	border-radius: 3px;
+}
+
+main section:nth-child(3) li h2, p{
+	grid-column-start: 2;
+	font-size: 1em;
+}
+
+main section:nth-child(3) h2{
+	grid-row-start: 2;
+	margin-left: 0.8em;
+}
+
+main section:nth-child(3) p{
+	align-self: end;
+	color: var(--color-paragraaf);
+	background-color: var(--color-backgroundlabel);
+	text-align: center;
+	width: 5em;
+	padding: 0.2em 0.7em 0.2em 0.7em;
+	border-radius: 5px;
+	font-size: 0.8em;
+	margin-left: 0.8em;
+}
+
+
+/****************/
+/* Meest bekeken*/
+/****************/
+/* https://stackoverflow.com/questions/10877/how-can-you-customize-the-numbers-in-an-ordered-list */
+main section:nth-child(4){
+	padding: 1.5em 0.7em;
+}
+
+main section:nth-child(4) h2{
+	padding-bottom: 1em;
+}
+
+main section:nth-child(4) ol{
+	counter-reset: item;
 	
 }
 
+  main section:nth-child(4) ol li {
+	display: flex;
+    gap: 1em;
+	margin-bottom: .5em;
+	align-items: center;
+  }
+  
+  main section:nth-child(4) ol li::before {
+	display: inline-block;
+	content: counter(item) "";
+	counter-increment: item;
+	font-size: 3em;
+	color: var(--color-backgroundlabel);
+
+  }
+
+  main section:nth-child(4) ol a{
+	text-decoration: none;
+	color: var(--color-text);
+	box-sizing: border-box;
+  }
 
 
 

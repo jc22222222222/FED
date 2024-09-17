@@ -267,20 +267,26 @@ main section:nth-child(4) ol{
 	margin-bottom: .5em;
 	align-items: center;
   }
+
+  main section:nth-child(4) ol li:nth-child(1) {
+	gap: 1.5em;
+  }
+
   
   main section:nth-child(4) ol li::before {
-	display: inline-block;
+	display: flex;
 	content: counter(item) "";
 	counter-increment: item;
 	font-size: 3em;
-	color: var(--color-backgroundlabel);
-
-  }
+	color: var(--color-backgroundlabel); 
+	justify-content: center;
+}
 
   main section:nth-child(4) ol a{
 	text-decoration: none;
 	color: var(--color-text);
 	box-sizing: border-box;
+	
   }
 
 

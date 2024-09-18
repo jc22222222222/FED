@@ -35,29 +35,22 @@
 /* Logo AT5 Nav */
 /*********************/
 .white{
-	line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    --fixed-color: rgba(0, 0, 0, 0.8);
-    --fixed-bgcolor: rgba(255, 255, 255, 0.8);
-    --fixed-bordercolor: rgba(230, 230, 230, 1);
-    font-size: 1rem;
-    font-weight: 400;
-    font-family: Accord,sans-serif;
     box-sizing: border-box;
     fill: #fff;
 }
 
 .red{
-	line-height: 1.15;
--webkit-text-size-adjust: 100%;
---fixed-color: rgba(0, 0, 0, 0.8);
---fixed-bgcolor: rgba(255, 255, 255, 0.8);
---fixed-bordercolor: rgba(230, 230, 230, 1);
-font-size: 1rem;
-font-weight: 400;
-font-family: Accord,sans-serif;
 box-sizing: border-box;
 fill: #e2212a;
+}
+
+.icon-tip{
+width: 1.6rem;
+height: 1.6rem;
+position: fixed;
+bottom: .5rem;
+right: .875rem;
+color: #e2212a;
 }
 
 
@@ -378,6 +371,5 @@ main section:nth-child(5) ul li{
 main section:nth-child(5) h2:nth-child(1){
 	margin-bottom: 1em;
 }
-
 
 

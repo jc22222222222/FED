@@ -23,11 +23,14 @@
 /*********************/
 :root {
 	/* startje */
+	color-scheme: light dark;
 	--color-text:#111;
 	--color-heading: #ffffff;
 	--color-paragraaf: #ffffff;
 	--color-background:#eee;
 	--color-backgroundlabel:#e2212a;
+	--color-playbuttons:#e2212a;
+	--color-backgroundspecials: #c4171d;
 }
 
 
@@ -93,11 +96,11 @@ h1{
 /* main section1 */
 /****************/
 
-main section:first-child img{
+section:first-child img{
 	width: 100%;
 }
 
-main section:first-child button{
+section:first-child button{
 	display: flex;
 	border: none;
     cursor: pointer;
@@ -110,7 +113,7 @@ main section:first-child button{
     border-radius: 0 0 0 5px;
 }
 
-main section:nth-child(1) a{
+section:nth-child(1) a{
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: 1fr ;
@@ -118,7 +121,7 @@ main section:nth-child(1) a{
 	
 }
 
-main section:nth-child(1) h2{
+section:nth-child(1) h2{
 	color: var(--color-heading);
 	grid-area: 1 / 1;
 	align-self: end;
@@ -126,7 +129,7 @@ main section:nth-child(1) h2{
 	
 }
 
-main section:nth-child(1) p{
+section:nth-child(1) p{
 	color: var(--color-paragraaf);
 	background-color: var(--color-backgroundlabel);
 	width: 5em;
@@ -138,13 +141,13 @@ main section:nth-child(1) p{
 	margin-bottom: 6.5em;
 }
 
-main section:nth-child(1) img{
+section:nth-child(1) img{
 	grid-row-start: 1;
 	grid-column-start: 1;
 	z-index: -1;
 }
 
-main section:nth-child(1) button{
+section:nth-child(1) button{
 	grid-row-start: 1;
 	grid-column-start: 1;
 	justify-self: end;
@@ -158,7 +161,7 @@ main section:nth-child(1) button{
 /****************/
 
 
-main section:nth-child(2) {
+section:nth-child(2) {
 	display: flex;
 	justify-content: space-evenly;
 	padding: 0.8em;
@@ -166,7 +169,7 @@ main section:nth-child(2) {
 	border-bottom: solid;
 }
 
-main section:nth-child(2) a{
+section:nth-child(2) a{
 	display:flex;
 	justify-content: center;
 	align-items: center;
@@ -196,38 +199,38 @@ section:nth-of-type(2) a:nth-of-type(3) svg {
 /****************/
 /* main section3*/
 /****************/
-main section:nth-child(3){
+section:nth-child(3){
 	padding-left: 1em;
 	padding-right: 1em;
 	padding-bottom: 0.25em;
 }
 
 
-main section:nth-child(3) li{
+section:nth-child(3) li{
 	display: grid;
 	grid-template-columns: auto 1fr;
 	grid-template-rows: auto 1fr;
 	padding: 0.4em 0 0.4em 0;
 }
 
-main section:nth-child(3) li img{
+section:nth-child(3) li img{
 	grid-row-start: 1;
 	grid-row-end: 3;
 	width: 6.56em;
 	border-radius: 3px;
 }
 
-main section:nth-child(3) li h2, p{
+section:nth-child(3) li h2, p{
 	grid-column-start: 2;
 	font-size: 1em;
 }
 
-main section:nth-child(3) h2{
+section:nth-child(3) h2{
 	grid-row-start: 2;
 	margin-left: 0.8em;
 }
 
-main section:nth-child(3) p{
+section:nth-child(3) p{
 	align-self: end;
 	color: var(--color-paragraaf);
 	background-color: var(--color-backgroundlabel);
@@ -246,32 +249,32 @@ main section:nth-child(3) p{
 /****************/
 /* https://stackoverflow.com/questions/10877/how-can-you-customize-the-numbers-in-an-ordered-list */
 
-main section:nth-child(4){
+section:nth-child(4){
 	padding: 1.5em 0.7em;
 }
 
-main section:nth-child(4) h2{
+section:nth-child(4) h2{
 	padding-bottom: 1em;
 }
 
-main section:nth-child(4) ol{
+section:nth-child(4) ol{
 	counter-reset: item;
 	
 }
 
-  main section:nth-child(4) ol li {
+section:nth-child(4) ol li {
 	display: flex;
     gap: 1em;
 	margin-bottom: .5em;
 	align-items: center;
   }
 
-  main section:nth-child(4) ol li:nth-child(1) {
+section:nth-child(4) ol li:nth-child(1) {
 	gap: 1.5em;
   }
 
   
-  main section:nth-child(4) ol li::before {
+section:nth-child(4) ol li::before {
 	display: flex;
 	content: counter(item) "";
 	counter-increment: item;
@@ -280,7 +283,7 @@ main section:nth-child(4) ol{
 	justify-content: center;
 }
 
-  main section:nth-child(4) ol a{
+section:nth-child(4) ol a{
 	text-decoration: none;
 	color: var(--color-text);
 	box-sizing: border-box;
@@ -291,12 +294,12 @@ main section:nth-child(4) ol{
 /*tip van de redactie*/
 /****************/
 
-main section:nth-of-type(5) img{
+section:nth-of-type(5) img{
 	width: 25em;
 	height: 20em;
 }
 
-  main section:nth-child(5) button{
+section:nth-child(5) li button{
 	display: flex;
 	border: none;
     cursor: pointer;
@@ -311,7 +314,7 @@ main section:nth-of-type(5) img{
 
 
 
-main section:nth-child(5) a{
+section:nth-child(5) a{
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: 1fr ;
@@ -319,7 +322,7 @@ main section:nth-child(5) a{
 	
 }
 
-main section:nth-child(5) ul h2{
+section:nth-child(5) ul h2{
 	color: var(--color-heading);
 	grid-area: 1 / 1;
 	align-self: end;
@@ -327,7 +330,7 @@ main section:nth-child(5) ul h2{
 	
 }
 
-main section:nth-child(5) p{
+section:nth-child(5) p{
 	color: var(--color-paragraaf);
 	background-color: var(--color-backgroundlabel);
 	width: 5em;
@@ -336,27 +339,27 @@ main section:nth-child(5) p{
 	padding: 0.2em 0.7em 0.2em 0.7em;
 	margin-left: 0.7em;
 	border-radius: 3px;
-	margin-bottom: 8em;
+	margin-bottom: 7em;
 }
 
-main section:nth-child(5) img{
+section:nth-child(5) img{
 	grid-row-start: 1;
 	grid-column-start: 1;
 	z-index: -1;
 }
 
-main section:nth-child(5) button{
+section:nth-child(5) li button{
 	grid-row-start: 1;
 	grid-column-start: 1;
 	justify-self: end;
 }
 
-main section:nth-child(5){
+section:nth-child(5){
 	padding-left: 1em;
 	padding-right: 1em;
 }
 
-main section:nth-child(5) ul{
+section:nth-child(5) ul{
 	list-style: none;
 	display: flex;
 	overflow: auto;
@@ -364,12 +367,158 @@ main section:nth-child(5) ul{
 	border-radius: 2px;
 }
 
-main section:nth-child(5) ul li{
+section:nth-child(5) ul li{
 	scroll-snap-align: center;
 }
 
-main section:nth-child(5) h2:nth-child(1){
-	margin-bottom: 1em;
+
+section:nth-child(5) h2:nth-child(1){
+	margin-bottom: 0.5em;
 }
+
+/****************/
+/*laad meer knop*/
+/****************/
+
+section:nth-child(6){
+	display: flex;
+	justify-content: center;
+}
+
+section:nth-child(6) button{
+	display: flex;
+	align-items: center;
+	margin-top: 2em;
+	padding: 0.5em 1.4em 0.5em 1em;
+	border-radius: 5px;
+	border: none;
+	font-size: 1em;
+	background-color: var(--color-backgroundlabel);
+	color: var(--color-paragraaf);
+}
+
+section:nth-child(6) button svg:nth-child(1){
+cursor: pointer;
+fill: currentColor;
+width: 1.125em;
+height: 1.125em;
+margin-right: .75rem;
+transition: transform .3s;
+color: #fff;	
+}
+
+/****************/
+/*    Special   */
+/****************/
+
+section:nth-child(7){
+	background-image: url(/images/at5-breaker-right-down.webp);
+	background-size: cover;
+	background-color: var(--color-backgroundspecials);
+	overflow: auto;
+	padding: 3em 0;
+	background-blend-mode: overlay;
+	
+}
+
+section:nth-of-type(7) img{
+	width: 25em;
+	height: 20em;
+}
+
+section:nth-child(7) li button{
+	display: flex;
+	border: none;
+    cursor: pointer;
+    fill: currentColor;
+    color: #fff;
+    width: 4em;
+    height: 4em;
+    padding: 6px 5px 6px 10px;
+    background-color: #e2212a;
+    border-radius: 0 10px 0 5px;
+	z-index: 1;
+}
+
+
+
+section:nth-child(7) a{
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr ;
+	text-decoration: none;
+	
+}
+
+section:nth-child(7) h2:nth-of-type(1){
+	color: var(--color-heading);
+	font-size: 1.375em ;
+}
+
+section:nth-child(7) button:nth-of-type(1){
+	
+}
+
+
+section:nth-child(7) ul h2{
+	color: var(--color-heading);
+	grid-area: 1 / 1;
+	align-self: end;
+	padding: 1em 0.5em 0.5em;
+	z-index: 1;
+}
+
+section:nth-child(7) p{
+	color: var(--color-paragraaf);
+	background-color: var(--color-backgroundlabel);
+	width: 5em;
+	grid-area: 1 / 1;
+	align-self: end;
+	padding: 0.2em 0.7em 0.2em 0.7em;
+	margin-left: 0.7em;
+	border-radius: 3px;
+	margin-bottom: 7em;
+	z-index: 1;
+}
+
+section:nth-child(7) img{
+	grid-row-start: 1;
+	grid-column-start: 1;
+	border-radius: 15px;
+	z-index: 0;
+}
+
+section:nth-child(7) li button{
+	grid-row-start: 1;
+	grid-column-start: 1;
+	justify-self: end;
+}
+
+section:nth-child(7) ul{
+	list-style: none;
+	display: flex;
+	scroll-snap-type: x mandatory;
+}
+
+section:nth-child(7) ul li{
+	scroll-snap-align: center;
+	padding-right: 1.5em;
+	
+}
+
+
+section:nth-child(7) h2:nth-child(1){
+	margin-bottom: 0.5em;
+}
+
+/****************/
+/*    footer    */
+/****************/
+
+footer svg{
+	width: 3.75em;
+}
+
+
 
 

@@ -5,7 +5,7 @@
   box-sizing:border-box; 
   margin: 0px; 
   padding: 0px;
-  font-family: "accord";
+  font-family: "accord",sans-serif;
 }
 
 @font-face {

@@ -32,6 +32,13 @@
 	--color-playbuttons:#e2212a;
 	--color-backgroundspecials: #c4171d;
 	--color-backgroundbody: #f4f4f4;
+	--color-toggle: #c4171d;
+
+	--color-themaD:#111;
+	--color-themaA: #fff;
+	--color-themaL: #fff;
+	--color-themaO: #c4171d;
+
 }
 
 body{
@@ -279,7 +286,7 @@ section:nth-of-type(2) a:nth-of-type(3) svg {
 /****************/
 /* main section3*/
 /****************/
-section:nth-child(3){
+main section:nth-child(3){
 	padding-left: 1em;
 	padding-right: 1em;
 	padding-bottom: 0.25em;
@@ -496,7 +503,7 @@ color: #fff;
 /*    Special   */
 /****************/
 
-section:nth-child(7){
+main section:nth-child(7){
 	background-image: url(/images/at5-breaker-right-down.webp);
 	background-size: cover;
 	background-color: var(--color-backgroundspecials);
@@ -505,12 +512,12 @@ section:nth-child(7){
 	background-blend-mode: overlay;
 }
 
-section:nth-of-type(7) img{
+main section:nth-of-type(7) img{
 	width: 25em;
 	height: 20em;
 }
 
-section:nth-child(7) li button{
+main section:nth-child(7) li button{
 	display: flex;
 	border: none;
     cursor: pointer;
@@ -526,7 +533,7 @@ section:nth-child(7) li button{
 
 
 
-section:nth-child(7) a{
+main section:nth-child(7) a{
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: 1fr ;
@@ -534,12 +541,12 @@ section:nth-child(7) a{
 	
 }
 
-section:nth-child(7) h2:nth-of-type(1){
+main section:nth-child(7) h2:nth-of-type(1){
 	color: var(--color-heading);
 	font-size: 1.375em;
 }
 
-section:nth-child(7) header {
+main section:nth-child(7) header {
 	display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -550,7 +557,7 @@ section:nth-child(7) header {
 	
 }
 
-section:nth-child(7) a:first-of-type button:nth-child(1){
+main section:nth-child(7) a:first-of-type button:nth-child(1){
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -568,14 +575,14 @@ section:nth-child(7) a:first-of-type button:nth-child(1){
 }
 
 
-section:nth-child(7) a:first-of-type svg:nth-child(2){
+main section:nth-child(7) a:first-of-type svg:nth-child(2){
     fill: #fff;
 	width: 2em;
 	height: 1em;
 }
 
 
-section:nth-child(7) ul h2{
+main section:nth-child(7) ul h2{
 	grid-area: 1 / 1;
 	align-self: end;
 	padding: 1em 0.5em 0.5em;
@@ -583,7 +590,7 @@ section:nth-child(7) ul h2{
 	
 }
 
-section:nth-child(7) ul p{
+main section:nth-child(7) ul p{
 	color: var(--color-paragraaf);
 	width: 5em;
 	grid-area: 1 / 1;
@@ -595,26 +602,26 @@ section:nth-child(7) ul p{
 	z-index: 1;
 }
 
-section:nth-child(7) img{
+main section:nth-child(7) img{
 	grid-row-start: 1;
 	grid-column-start: 1;
 	border-radius: 15px;
 	z-index: 0;
 }
 
-section:nth-child(7) li button{
+main section:nth-child(7) li button{
 	grid-row-start: 1;
 	grid-column-start: 1;
 	justify-self: end;
 }
 
-section:nth-child(7) ul{
+main section:nth-child(7) ul{
 	list-style: none;
 	display: flex;
 	scroll-snap-type: x mandatory;
 }
 
-section:nth-child(7) ul li{
+main section:nth-child(7) ul li{
 	scroll-snap-align: center;
 	padding-top: 1em;
 	padding-right: 1.5em;
@@ -622,7 +629,7 @@ section:nth-child(7) ul li{
 }
 
 
-section:nth-child(7) li h2:nth-child(1){
+main section:nth-child(7) li h2:nth-child(1){
 	margin-bottom: 0.5em;
 	font-size: 2em;
 	font-weight: 700;
@@ -635,13 +642,182 @@ section:nth-child(7) li h2:nth-child(1){
 footer{	
 	background-color: #1e1815;
 	padding: 3em 0 0;
+	font-size: 0.875em;
+	display: grid;
+	grid-template-rows: 1fr 1f 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 }
 
 footer svg{
 	width: 5.5em;
 	margin: 1.5em 0;
 	padding: 0 0.75em;
+	grid-area: 1/1;
 }
+
+footer section:nth-of-type(1){
+	display: flex;
+	grid-area: 3/1;
+	padding: 0 1em;
+	margin-top: 0.6em;
+	align-items: center;
+}
+
+footer section:nth-of-type(1) ul{
+	display: flex;
+}
+
+
+
+/* knoppen thema */
+footer section:nth-of-type(1) button{
+	border-radius: 50%;
+    color: #fff;
+    background: rgba(0, 0, 0, 0);
+    border: .1rem solid #fff;
+    height: 2.2rem;
+    width: 2.2rem;
+    opacity: .5;
+    margin: 0 .2rem;
+    position: relative;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    transition: transform .15s ease-in-out, opacity .15s ease-in-out;
+}
+
+footer section:nth-of-type(1) li:nth-of-type(1) button{
+	background-color: var(--color-themaD);
+}
+
+footer section:nth-of-type(1) li:nth-of-type(2) button{
+	background-color: var(--color-themaA);
+	color: var(--color-text);
+}
+
+footer section:nth-of-type(1) li:nth-of-type(3) button{
+	background-color: var(--color-themaL);
+	color: var(--color-text);
+}
+
+footer section:nth-of-type(1) li:nth-of-type(4) button{
+	background-color: var(--color-themaO);
+}
+
+
+
+footer ul li{
+	margin-top: 0.6em;
+}
+
+footer ul:nth-of-type(1){
+	grid-area: 2/1;
+	padding: 0 1em;
+	list-style: none;
+}
+
+footer ul:nth-of-type(2){
+	display: flex;
+	grid-area: 4/1;
+	padding: 0 1em;
+	list-style: none;
+}
+
+/* toggle button */
+/* The switch - the box around the slider */
+footer ul:nth-of-type(2) label{
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  footer ul:nth-of-type(2) label input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+  
+  /* toggle knop bron: https://www.w3schools.com/howto/howto_css_switch.asp */
+  .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  footer ul:nth-of-type(2) span:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  input:checked + span {
+	background-color: var(--color-toggle);
+  }
+  
+  input:focus + span {
+	box-shadow: 0 0 1px var(--color-toggle);
+  }
+  
+  input:checked + span:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+  }
+  
+  /* circel voor toggle*/
+  span {
+	border-radius: 34px;
+  }
+  
+  span:before {
+	border-radius: 50%;
+  }
+
+footer ul:nth-of-type(3){
+	grid-area: 5/1;
+	padding: 0 1em;
+	list-style: none;
+}
+
+/* Media links */
+footer ul:nth-of-type(4){
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 6;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(3, 1fr);
+	list-style: none;
+}
+
+footer ul:nth-of-type(4) li a{
+	display: flex;
+	align-items: center;
+}
+
+
+footer ul:nth-of-type(4) svg{
+	opacity: .6;
+    fill: #fff;
+    margin: .5rem .75rem;
+	width: 4em;
+	height: 4em;
+}
+
 
 footer svg g:nth-of-type(1){
 	fill: #fff;
@@ -655,4 +831,17 @@ footer svg ellipse{
 footer svg g:nth-of-type(2) path{
 	box-sizing: border-box;
 	fill: #e2212a;
+}
+
+footer a, footer p{
+	text-decoration: none;
+	color: var(--color-paragraaf);
+	opacity: .6;
+}
+
+footer section:nth-of-type(2){
+	grid-row-start: 7;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	padding: 1em 0;
 }

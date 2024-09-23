@@ -230,7 +230,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. Vermeld de bronnen ook in je code.
 
   1. bron voor de toggle button: https://www.w3schools.com/howto/howto_css_switch.asp
-  2. bron 2
+  2. https://www.at5.nl/
   3. ...
 
 </details>

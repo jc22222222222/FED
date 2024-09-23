@@ -22,7 +22,7 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
+	/* lightmode */
 	color-scheme: light dark;
 	--color-text:#111;
 	--color-heading: #ffffff;
@@ -33,7 +33,27 @@
 	--color-backgroundspecials: #c4171d;
 	--color-backgroundbody: #f4f4f4;
 	--color-toggle: #c4171d;
+	--color-themaD:#111;
+	--color-themaA: #fff;
+	--color-themaL: #fff;
+	--color-themaO: #c4171d;
+	--color-achtergrondfooterdisclaimer: #000;
+	--color-achtergrondfooter: #1e1815;
 
+}
+
+:root {
+	/* darkmode */
+	color-scheme: light dark;
+	--color-text:#111;
+	--color-heading: #ffffff;
+	--color-paragraaf: #ffffff;
+	--color-background:#eee;
+	--color-backgroundlabel:#e2212a;
+	--color-playbuttons:#e2212a;
+	--color-backgroundspecials: #c4171d;
+	--color-backgroundbody: #f4f4f4;
+	--color-toggle: #c4171d;
 	--color-themaD:#111;
 	--color-themaA: #fff;
 	--color-themaL: #fff;
@@ -41,6 +61,8 @@
 
 }
 
+
+/* tip icon */
 body{
 	background-color: var(--color-backgroundbody);
 }
@@ -54,6 +76,35 @@ body > svg{
 	color: #e2212a;
 	z-index: 10;
 }
+
+@media screen and (min-width: 48.125em) {
+
+	body > svg {
+		display: none;
+	}
+	
+	
+
+}
+
+nav > svg{
+	align-self: center;
+	width: 1.6rem;
+	height: 1.6rem;
+	color: #e2212a;
+	z-index: 10;
+}
+
+@media screen and (max-width: 48.125em) {
+
+	nav > svg {
+		display: none;
+	}
+	
+	
+
+}
+
 
 /*********************/
 /* Logo AT5 Nav */
@@ -293,31 +344,31 @@ main section:nth-child(3){
 }
 
 
-section:nth-child(3) li{
+main section:nth-child(3) li{
 	display: grid;
 	grid-template-columns: auto 1fr;
 	grid-template-rows: auto 1fr;
 	padding: 0.4em 0 0.4em 0;
 }
 
-section:nth-child(3) li img{
+main section:nth-child(3) li img{
 	grid-row-start: 1;
 	grid-row-end: 3;
 	width: 6.56em;
 	border-radius: 3px;
 }
 
-section:nth-child(3) li h2, p{
+main section:nth-child(3) li h2, p{
 	grid-column-start: 2;
 	font-size: 1em;
 }
 
-section:nth-child(3) h2{
+main section:nth-child(3) h2{
 	grid-row-start: 2;
 	margin-left: 0.8em;
 }
 
-section:nth-child(3) ul p{
+main section:nth-child(3) ul p{
 	align-self: end;
 	color: var(--color-paragraaf);
 	background-color: var(--color-backgroundlabel);
@@ -640,7 +691,7 @@ main section:nth-child(7) li h2:nth-child(1){
 /****************/
 
 footer{	
-	background-color: #1e1815;
+	background-color: var(--color-achtergrondfooter);
 	padding: 3em 0 0;
 	font-size: 0.875em;
 	display: grid;
@@ -655,21 +706,26 @@ footer svg{
 	grid-area: 1/1;
 }
 
+
+/* thema */
 footer section:nth-of-type(1){
 	display: flex;
-	grid-area: 3/1;
+    align-items: center;
+    justify-content: space-between;
+	grid-row: 3;
+	grid-column-start: 1;
+	grid-column-end: 3;
 	padding: 0 1em;
 	margin-top: 0.6em;
-	align-items: center;
+	width: 70%;
 }
+
 
 footer section:nth-of-type(1) ul{
 	display: flex;
 }
 
-
-
-/* knoppen thema */
+/* thema knoppen */
 footer section:nth-of-type(1) button{
 	border-radius: 50%;
     color: #fff;
@@ -718,13 +774,20 @@ footer ul:nth-of-type(1){
 
 footer ul:nth-of-type(2){
 	display: flex;
-	grid-area: 4/1;
+	justify-content:space-between;
+	grid-row: 4;
+	grid-column-start: 1;
+	grid-column-end: 3;
 	padding: 0 1em;
 	list-style: none;
+	margin-top: 0.6em;
+	align-items: center;
+	width: 58%;
 }
 
-/* toggle button */
-/* The switch - the box around the slider */
+
+/* slider knop bron: https://www.w3schools.com/howto/howto_css_switch.asp */
+/* slider knop */
 footer ul:nth-of-type(2) label{
 	position: relative;
 	display: inline-block;
@@ -732,15 +795,13 @@ footer ul:nth-of-type(2) label{
 	height: 34px;
   }
   
-  /* Hide default HTML checkbox */
+  /* checkbox verstoppen*/
   footer ul:nth-of-type(2) label input {
 	opacity: 0;
-	width: 0;
-	height: 0;
   }
   
-  /* toggle knop bron: https://www.w3schools.com/howto/howto_css_switch.asp */
-  .slider {
+  
+  footer span {
 	position: absolute;
 	cursor: pointer;
 	top: 0;
@@ -750,6 +811,7 @@ footer ul:nth-of-type(2) label{
 	background-color: #ccc;
 	-webkit-transition: .4s;
 	transition: .4s;
+	width: 4em;
   }
   
   footer ul:nth-of-type(2) span:before {
@@ -809,13 +871,14 @@ footer ul:nth-of-type(4) li a{
 	align-items: center;
 }
 
-
+/* at5 logo footer */
 footer ul:nth-of-type(4) svg{
 	opacity: .6;
     fill: #fff;
     margin: .5rem .75rem;
-	width: 4em;
-	height: 4em;
+	padding: 0;
+	width: 2em;
+	height: 2em;
 }
 
 
@@ -833,6 +896,9 @@ footer svg g:nth-of-type(2) path{
 	fill: #e2212a;
 }
 
+
+
+/* footer links */
 footer a, footer p{
 	text-decoration: none;
 	color: var(--color-paragraaf);
@@ -844,4 +910,23 @@ footer section:nth-of-type(2){
 	grid-column-start: 1;
 	grid-column-end: 3;
 	padding: 1em 0;
+	background-color: var(--color-achtergrondfooterdisclaimer);
+}
+
+footer section:nth-of-type(2){
+	display: flex;
+	flex-direction: column;
+	padding: 1em 0;
+	padding-left: 1em;
+	
+}
+
+footer section:nth-of-type(2) a:nth-of-type(1){
+	margin-top: 1em;
+	
+}
+
+footer section:nth-of-type(2) a:nth-of-type(2){
+	margin-top: 0.6em;
+	
 }

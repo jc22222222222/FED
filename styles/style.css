@@ -39,27 +39,11 @@
 	--color-themaO: #c4171d;
 	--color-achtergrondfooterdisclaimer: #000;
 	--color-achtergrondfooter: #1e1815;
+	--color-linkfooter: #ffffff;
+	--color-linknav: #000;
 
 }
 
-:root {
-	/* darkmode */
-	color-scheme: light dark;
-	--color-text:#111;
-	--color-heading: #ffffff;
-	--color-paragraaf: #ffffff;
-	--color-background:#eee;
-	--color-backgroundlabel:#e2212a;
-	--color-playbuttons:#e2212a;
-	--color-backgroundspecials: #c4171d;
-	--color-backgroundbody: #f4f4f4;
-	--color-toggle: #c4171d;
-	--color-themaD:#111;
-	--color-themaA: #fff;
-	--color-themaL: #fff;
-	--color-themaO: #c4171d;
-
-}
 
 
 /* tip icon */
@@ -100,15 +84,49 @@ nav > svg{
 	nav > svg {
 		display: none;
 	}
-	
+
+	/* tekst logo nav */
+	nav h1 svg:nth-of-type(1) g:nth-of-type(3){
+		display: none;
+	}
 	
 
 }
+
+/* actueel en kijk/luister */
+nav > a{
+	text-decoration: none;
+	color: var(--color-linknav);
+	align-self: center;
+	margin-right: 2em;
+	font-size: 1.2em;
+	width: auto;
+	letter-spacing: .15em;
+}
+
+nav > a:nth-of-type(1){
+	position: absolute;
+	left: 8em;
+}
+
+nav > a:nth-of-type(2){
+	position: absolute;
+	left: 15em;
+}
+
+
+
+
+
 
 
 /*********************/
 /* Logo AT5 Nav */
 /*********************/
+nav h1{
+	align-self: center;
+}
+
 nav h1 svg ellipse{
     box-sizing: border-box;
     fill: #fff;
@@ -134,7 +152,6 @@ nav h1 svg g:nth-of-type(2) path{
 nav{
 	display: flex;
 	padding: 8px 8px 8px 10px;
-	
 }
 
 nav button{
@@ -161,9 +178,22 @@ h1{
 		display: none;
 	}
 
-	nav button:nth-of-type(1) p{
+	nav button:nth-of-type(1) span{
 		display: none;
 	}
+
+	nav {
+		padding: 2em 3em;
+	}
+
+}
+
+@media screen and (max-width: 48.125em) {
+
+	nav > a {
+		display: none;
+	}
+	
 
 }
 
@@ -217,8 +247,6 @@ nav section:nth-of-type(1) a:nth-of-type(3) svg {
 
 
 
-
-
 /****************/
 /* main section1 */
 /****************/
@@ -227,7 +255,7 @@ section:first-child img{
 	width: 100%;
 }
 
-section:first-child button{
+main section:first-child button{
 	display: flex;
 	border: none;
     cursor: pointer;
@@ -240,14 +268,14 @@ section:first-child button{
     border-radius: 0 0 0 5px;
 }
 
-section:nth-child(1) a{
+main section:nth-child(1) a{
 	display: grid;
 	grid-template-rows: 1fr max-content;
 	text-decoration: none;
 	
 }
 
-section:nth-child(1) h2{
+main section:nth-child(1) h2{
 	color: var(--color-heading);
 	grid-area: 2 / 1;
 	align-self: end;
@@ -255,7 +283,7 @@ section:nth-child(1) h2{
 	
 }
 
-section:nth-child(1) p{
+main section:nth-child(1) p{
 	color: var(--color-paragraaf);
 	background-color: var(--color-backgroundlabel);
 	width: 5em;
@@ -266,14 +294,14 @@ section:nth-child(1) p{
 	border-radius: 3px;
 }
 
-section:nth-child(1) img{
+main section:nth-child(1) img{
 	grid-row-start: 1;
 	grid-row-end: 3;
 	grid-column-start: 1;
 	z-index: -1;
 }
 
-section:nth-child(1) button{
+main section:nth-child(1) button{
 	grid-row-start: 1;
 	grid-column-start: 1;
 	justify-self: end;
@@ -296,7 +324,7 @@ main section:nth-of-type(2) {
 	border-bottom: solid;
 }
 
-section:nth-child(2) a{
+main section:nth-child(2) a{
 	display:flex;
 	justify-content: center;
 	align-items: center;
@@ -305,17 +333,17 @@ section:nth-child(2) a{
 	color: var(--color-text);
 }
 
-section:nth-of-type(2) a:nth-of-type(1) svg {
+main section:nth-of-type(2) a:nth-of-type(1) svg {
 	width: 1.6em;
 	margin-right: 0.9em;
 }
 
-section:nth-of-type(2) a:nth-of-type(2) svg {
+main section:nth-of-type(2) a:nth-of-type(2) svg {
 	width: 1.6em;
 	margin-right: 0.9em;
 }
 
-section:nth-of-type(2) a:nth-of-type(3) svg {
+main section:nth-of-type(2) a:nth-of-type(3) svg {
 	width: 1.6em;
 	margin-right: 0.9em;
 }
@@ -387,32 +415,32 @@ main section:nth-child(3) ul p{
 /****************/
 /* https://stackoverflow.com/questions/10877/how-can-you-customize-the-numbers-in-an-ordered-list */
 
-section:nth-child(4){
+main section:nth-child(4){
 	padding: 1.5em 0.7em;
 }
 
-section:nth-child(4) h2{
+main section:nth-child(4) h2{
 	padding-bottom: 1em;
 }
 
-section:nth-child(4) ol{
+main section:nth-child(4) ol{
 	counter-reset: item;
 	
 }
 
-section:nth-child(4) ol li {
+main section:nth-child(4) ol li {
 	display: flex;
     gap: 1em;
 	margin-bottom: .5em;
 	align-items: center;
   }
 
-section:nth-child(4) ol li:nth-child(1) {
+main section:nth-child(4) ol li:nth-child(1) {
 	gap: 1.5em;
   }
 
   
-section:nth-child(4) ol li::before {
+main section:nth-child(4) ol li::before {
 	display: flex;
 	content: counter(item) "";
 	counter-increment: item;
@@ -421,7 +449,7 @@ section:nth-child(4) ol li::before {
 	justify-content: center;
 }
 
-section:nth-child(4) ol a{
+main section:nth-child(4) ol a{
 	text-decoration: none;
 	color: var(--color-text);
 	box-sizing: border-box;
@@ -432,13 +460,13 @@ section:nth-child(4) ol a{
 /*tip van de redactie*/
 /****************/
 
-section:nth-of-type(5) img{
+main section:nth-of-type(5) img{
 	width: 100%;
 	object-fit: cover;
 	height: 20em;
 }
 
-section:nth-child(5) li button{
+main section:nth-child(5) li button{
 	display: flex;
 	border: none;
     cursor: pointer;
@@ -453,7 +481,7 @@ section:nth-child(5) li button{
 
 
 
-section:nth-child(5) a{
+main section:nth-child(5) a{
 	display: grid;
 	grid-template-rows: 1fr max-content;
 	text-decoration: none;
@@ -461,7 +489,7 @@ section:nth-child(5) a{
 }
 
 
-section:nth-child(5) ul h2{
+main section:nth-child(5) ul h2{
 	color: var(--color-heading);
 	grid-area: 2 / 1;
 	align-self: end;
@@ -469,7 +497,7 @@ section:nth-child(5) ul h2{
 	
 }
 
-section:nth-child(5) p{
+main section:nth-child(5) p{
 	color: var(--color-paragraaf);
 	background-color: var(--color-backgroundlabel);
 	width: 5em;
@@ -480,25 +508,25 @@ section:nth-child(5) p{
 	border-radius: 3px;
 }
 
-section:nth-child(5) img{
+main section:nth-child(5) img{
 	grid-row-start: 1;
 	grid-row-end: 3;
 	grid-column-start: 1;
 	z-index: -1;
 }
 
-section:nth-child(5) li button{
+main section:nth-child(5) li button{
 	grid-row-start: 1;
 	grid-column-start: 1;
 	justify-self: end;
 }
 
-section:nth-child(5){
+main section:nth-child(5){
 	padding-left: 1em;
 	padding-right: 1em;
 }
 
-section:nth-child(5) ul{
+main section:nth-child(5) ul{
 	list-style: none;
 	display: flex;
 	overflow: auto;
@@ -506,7 +534,7 @@ section:nth-child(5) ul{
 	border-radius: 2px;
 }
 
-section:nth-child(5) ul li{
+main section:nth-child(5) ul li{
 	scroll-snap-align: center;
 	width: 100%;
 	flex-shrink: 0;
@@ -514,7 +542,7 @@ section:nth-child(5) ul li{
 }
 
 
-section:nth-child(5) h2:nth-child(1){
+main section:nth-child(5) h2:nth-child(1){
 	margin-bottom: 0.5em;
 }
 
@@ -522,13 +550,13 @@ section:nth-child(5) h2:nth-child(1){
 /*laad meer knop*/
 /****************/
 
-section:nth-child(6){
+main section:nth-child(6){
 	display: flex;
 	justify-content: center;
 
 }
 
-section:nth-child(6) button{
+main section:nth-child(6) button{
 	display: flex;
 	align-items: center;
 	margin: 2em ;
@@ -540,7 +568,7 @@ section:nth-child(6) button{
 	color: var(--color-paragraaf);
 }
 
-section:nth-child(6) button svg:nth-child(1){
+main section:nth-child(6) button svg:nth-child(1){
 cursor: pointer;
 fill: currentColor;
 width: 1.125em;
@@ -689,14 +717,18 @@ main section:nth-child(7) li h2:nth-child(1){
 /****************/
 /*    footer    */
 /****************/
-
-footer{	
+footer{
 	background-color: var(--color-achtergrondfooter);
+}
+
+footer section:nth-of-type(1){	
 	padding: 3em 0 0;
 	font-size: 0.875em;
 	display: grid;
 	grid-template-rows: 1fr 1f 1fr 1fr 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr;
+	max-width: 65rem;
+	margin: auto;
 }
 
 footer svg{
@@ -708,25 +740,28 @@ footer svg{
 
 
 /* thema */
-footer section:nth-of-type(1){
+footer section section:nth-of-type(1){
 	display: flex;
     align-items: center;
-    justify-content: space-between;
 	grid-row: 3;
 	grid-column-start: 1;
-	grid-column-end: 3;
+	grid-column-end: 2;
 	padding: 0 1em;
-	margin-top: 0.6em;
-	width: 70%;
+	padding-right: 0;
+	margin: 0;
+	font-size: 1em;
+	justify-content: space-between;
+	
 }
 
 
-footer section:nth-of-type(1) ul{
+footer section section:nth-of-type(1) ul{
 	display: flex;
+	
 }
 
 /* thema knoppen */
-footer section:nth-of-type(1) button{
+footer section section:nth-of-type(1) button{
 	border-radius: 50%;
     color: #fff;
     background: rgba(0, 0, 0, 0);
@@ -742,39 +777,39 @@ footer section:nth-of-type(1) button{
     transition: transform .15s ease-in-out, opacity .15s ease-in-out;
 }
 
-footer section:nth-of-type(1) li:nth-of-type(1) button{
+footer section section:nth-of-type(1) li:nth-of-type(1) button{
 	background-color: var(--color-themaD);
 }
 
-footer section:nth-of-type(1) li:nth-of-type(2) button{
+footer section section:nth-of-type(1) li:nth-of-type(2) button{
 	background-color: var(--color-themaA);
 	color: var(--color-text);
 }
 
-footer section:nth-of-type(1) li:nth-of-type(3) button{
+footer section section:nth-of-type(1) li:nth-of-type(3) button{
 	background-color: var(--color-themaL);
 	color: var(--color-text);
 }
 
-footer section:nth-of-type(1) li:nth-of-type(4) button{
+footer section section:nth-of-type(1) li:nth-of-type(4) button{
 	background-color: var(--color-themaO);
 }
 
 
 
-footer ul li{
+footer section ul li{
 	margin-top: 0.6em;
 }
 
-footer ul:nth-of-type(1){
+footer section ul:nth-of-type(1){
 	grid-area: 2/1;
 	padding: 0 1em;
 	list-style: none;
+	padding-right: 0;
 }
 
-footer ul:nth-of-type(2){
+footer section ul:nth-of-type(2){
 	display: flex;
-	justify-content:space-between;
 	grid-row: 4;
 	grid-column-start: 1;
 	grid-column-end: 3;
@@ -782,13 +817,12 @@ footer ul:nth-of-type(2){
 	list-style: none;
 	margin-top: 0.6em;
 	align-items: center;
-	width: 58%;
 }
 
 
 /* slider knop bron: https://www.w3schools.com/howto/howto_css_switch.asp */
 /* slider knop */
-footer ul:nth-of-type(2) label{
+footer section ul:nth-of-type(2) label{
 	position: relative;
 	display: inline-block;
 	width: 60px;
@@ -796,12 +830,12 @@ footer ul:nth-of-type(2) label{
   }
   
   /* checkbox verstoppen*/
-  footer ul:nth-of-type(2) label input {
+  footer section ul:nth-of-type(2) label input {
 	opacity: 0;
   }
   
   
-  footer span {
+  footer section span {
 	position: absolute;
 	cursor: pointer;
 	top: 0;
@@ -811,10 +845,10 @@ footer ul:nth-of-type(2) label{
 	background-color: #ccc;
 	-webkit-transition: .4s;
 	transition: .4s;
-	width: 4em;
+	width: 4.3em;
   }
   
-  footer ul:nth-of-type(2) span:before {
+  footer section ul:nth-of-type(2) span:before {
 	position: absolute;
 	content: "";
 	height: 26px;
@@ -826,7 +860,7 @@ footer ul:nth-of-type(2) label{
 	transition: .4s;
   }
   
-  input:checked + span {
+   input:checked + span {
 	background-color: var(--color-toggle);
   }
   
@@ -849,14 +883,14 @@ footer ul:nth-of-type(2) label{
 	border-radius: 50%;
   }
 
-footer ul:nth-of-type(3){
+footer section ul:nth-of-type(3){
 	grid-area: 5/1;
 	padding: 0 1em;
 	list-style: none;
 }
 
 /* Media links */
-footer ul:nth-of-type(4){
+footer section ul:nth-of-type(4){
 	grid-column-start: 1;
 	grid-column-end: 4;
 	grid-row-start: 6;
@@ -866,13 +900,13 @@ footer ul:nth-of-type(4){
 	list-style: none;
 }
 
-footer ul:nth-of-type(4) li a{
+footer section ul:nth-of-type(4) li a{
 	display: flex;
 	align-items: center;
 }
 
 /* at5 logo footer */
-footer ul:nth-of-type(4) svg{
+footer section ul:nth-of-type(4) svg{
 	opacity: .6;
     fill: #fff;
     margin: .5rem .75rem;
@@ -882,11 +916,11 @@ footer ul:nth-of-type(4) svg{
 }
 
 
-footer svg g:nth-of-type(1){
+footer section svg g:nth-of-type(1){
 	fill: #fff;
 }
 
-footer svg ellipse{
+footer section svg ellipse{
     box-sizing: border-box;
     fill: #fff;
 }
@@ -898,10 +932,10 @@ footer svg g:nth-of-type(2) path{
 
 
 
-/* footer links */
-footer a, footer p{
+/* footer disclaimer */
+footer section a, footer p{
 	text-decoration: none;
-	color: var(--color-paragraaf);
+	color: var(--color-linkfooter);
 	opacity: .6;
 }
 
@@ -923,10 +957,73 @@ footer section:nth-of-type(2){
 
 footer section:nth-of-type(2) a:nth-of-type(1){
 	margin-top: 1em;
+	text-decoration-line: underline;
 	
 }
 
 footer section:nth-of-type(2) a:nth-of-type(2){
 	margin-top: 0.6em;
-	
+	text-decoration-line: underline;
 }
+
+footer section:nth-of-type(2) a,p{
+		
+}
+
+
+@media screen and (min-width: 48.152em) {
+
+	
+	/* disclaimer */
+	footer section:nth-of-type(2){
+		flex-direction: row;
+		grid-column-start: 1;
+		grid-column-end: -1;
+		margin-top: 7.5em;
+	}
+
+	footer section:nth-of-type(2) a:nth-of-type(1){
+		margin: 0;
+		margin-left: 1em;
+	}
+	
+	footer section:nth-of-type(2) a:nth-of-type(2){
+		margin: 0;
+		margin-left: 1em;
+	}
+
+	/* footer links */
+	footer section{	
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	footer section ul:nth-of-type(3){
+		grid-area: 2/2;
+		padding: 0 1em;
+		list-style: none;
+	}
+
+	/* footer media links */
+
+	footer section  ul:nth-of-type(4){
+		grid-area: 2/3;
+		margin-right: auto;
+	}
+
+	/* thema */
+	footer section section:nth-of-type(1){
+		justify-content: left;
+	}
+
+	/* slider */
+	footer  section ul:nth-of-type(2){
+		display: flex;
+		justify-content:space-between;
+		width: 0;
+	}
+
+	footer section ul:nth-of-type(2) label{
+		margin-left: 1em;
+	}
+}
+

@@ -242,14 +242,12 @@ nav section:nth-of-type(1) a:nth-of-type(3) svg {
 		display: none;
 	}
 	
-	
-
 }
 
 
 
 /****************/
-/* main section1 */
+/* banner main sec*/
 /****************/
 
 section:first-child img{
@@ -313,7 +311,7 @@ main section:nth-child(1) button{
 
 
 /****************/
-/* main section2 */
+/* weer verkeer  */
 /****************/
 
 
@@ -322,7 +320,7 @@ main section:nth-of-type(2) {
 	justify-content: space-evenly;
 	padding: 0.8em;
 	margin-bottom: 3em;
-	border-bottom: solid;
+	border-bottom: solid #e6e6e6;
 }
 
 main section:nth-child(2) a{
@@ -364,7 +362,7 @@ main section:nth-of-type(2) a:nth-of-type(3) svg {
 
 
 /****************/
-/* main section3*/
+/* artikelen */
 /****************/
 main section:nth-child(3){
 	padding-left: 1em;
@@ -726,6 +724,11 @@ main section:nth-child(7) li h2:nth-child(1){
 /****************/
 footer{
 	background-color: var(--color-achtergrondfooter);
+	background-image: url(/images/at5-breaker-right-up.webp);
+	background-position: bottom right;
+    background-size: cover;
+	background-repeat: no-repeat;
+    background-blend-mode: overlay;
 }
 
 footer section:nth-of-type(1){	
@@ -755,7 +758,7 @@ footer section section:nth-of-type(1){
 	grid-column-end: 2;
 	padding: 0 1em;
 	padding-right: 0;
-	margin: 0;
+	margin-left: 0;
 	font-size: 1em;
 	justify-content: space-between;
 	
@@ -944,6 +947,7 @@ footer section a, footer p{
 	text-decoration: none;
 	color: var(--color-linkfooter);
 	opacity: .6;
+	margin-right: 1em;
 }
 
 footer section:nth-of-type(2){
@@ -1010,7 +1014,7 @@ footer section:nth-of-type(2) a:nth-of-type(2){
 
 	footer section  ul:nth-of-type(4){
 		grid-area: 2/3;
-		margin-right: auto;
+		margin-right: 2em;
 	}
 
 	/* thema */

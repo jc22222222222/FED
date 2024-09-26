@@ -77,6 +77,7 @@ nav > svg{
 	height: 1.6rem;
 	color: #e2212a;
 	z-index: 10;
+	
 }
 
 @media screen and (max-width: 48.125em) {
@@ -106,12 +107,12 @@ nav > a{
 
 nav > a:nth-of-type(1){
 	position: absolute;
-	left: 8em;
+	left: 10em;
 }
 
 nav > a:nth-of-type(2){
 	position: absolute;
-	left: 15em;
+	left: 17em;
 }
 
 
@@ -371,12 +372,18 @@ main section:nth-child(3){
 	padding-bottom: 0.25em;
 }
 
+main section:nth-child(3) ul {
+	list-style: none;
+}
 
-main section:nth-child(3) li{
+
+main section:nth-child(3) li a{
 	display: grid;
 	grid-template-columns: auto 1fr;
 	grid-template-rows: auto 1fr;
 	padding: 0.4em 0 0.4em 0;
+	color: var(--color-text);
+	text-decoration: none;
 }
 
 main section:nth-child(3) li img{
@@ -964,10 +971,6 @@ footer section:nth-of-type(2) a:nth-of-type(1){
 footer section:nth-of-type(2) a:nth-of-type(2){
 	margin-top: 0.6em;
 	text-decoration-line: underline;
-}
-
-footer section:nth-of-type(2) a,p{
-		
 }
 
 

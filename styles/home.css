@@ -198,12 +198,12 @@ main section:nth-child(3) li img{
     border-radius: 3px;
 }
 
-main section:nth-child(3) li h2, p{
+main section:nth-child(3) li h3, p{
     grid-column-start: 2;
     font-size: 1em;
 }
 
-main section:nth-child(3) h2{
+main section:nth-child(3) h3{
     grid-row-start: 2;
     margin-left: 0.8em;
 }
@@ -330,7 +330,7 @@ main section:nth-child(5) a{
 }
 
 
-main section:nth-child(5) ul h2{
+main section:nth-child(5) ul h3{
     color: var(--color-heading);
     grid-area: 2 / 1;
     align-self: end;
@@ -435,6 +435,7 @@ main section:nth-child(6) button{
     font-size: 1em;
     background-color: var(--color-backgroundlabel);
     color: var(--color-paragraaf);
+    text-transform: uppercase;
 }
 
 main section:nth-child(6) button svg:nth-child(1){
@@ -445,6 +446,35 @@ margin-right: .75rem;
 transition: transform .3s;
 color: #fff;	
 }
+
+button[aria-label="draai"]:hover svg {
+    animation-name: draai;
+    animation-duration: .5s;
+  }
+
+
+
+@keyframes draai {
+    from {
+      rotate:0deg;
+    }
+    to {
+      rotate:-180deg;
+    }
+
+  }
+
+  @keyframes draai-uit {
+    0% {
+        rotate:-180deg;
+      }
+      100% {
+        rotate:0deg;
+      }
+  }
+
+  
+  
 
 /****************/
 /*    Special   */
@@ -515,12 +545,16 @@ main section:nth-child(7) a svg:nth-child(1){
 }
 
 
-main section:nth-child(7) ul h2{
+main section:nth-child(7) ul h3{
     grid-area: 1 / 1;
     align-self: end;
     padding: 1em 0.5em 0.5em;
     z-index: 1;
     width: 100%;
+    margin-bottom: 0.5em;
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--color-heading);
 }
 
 main section:nth-child(7) ul p{
@@ -554,13 +588,6 @@ main section:nth-child(7) ul li {
     scroll-snap-align: center;
     padding-top: 1em;
     padding-right: 1.5em;
-}
-
-
-main section:nth-child(7) li h2:nth-child(1){
-    margin-bottom: 0.5em;
-    font-size: 2em;
-    font-weight: 700;
 }
 
 @media screen and (min-width: 66em){

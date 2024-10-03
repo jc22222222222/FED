@@ -48,9 +48,6 @@
   
   
   /* tip icon */
-  body{
-	  background-color: var(--color-backgroundbody);
-  }
   
   body > svg{
 	  width: 1.6rem;
@@ -204,6 +201,7 @@
 	position: sticky;
 	inset: 0;
 	background-color: var(--color-backgroundnav);
+	z-index: 9;
   }
   
   nav{

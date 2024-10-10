@@ -456,167 +456,7 @@ button[aria-label="draai"]:hover svg {
 /*    Special   */
 /****************/
 
-/*  
-main section:nth-child(7){
-    background-image: url(/images/at5-breaker-right-down.webp);
-    background-size: cover;
-    background-color: var(--color-backgroundspecials);
-    overflow: auto;
-    padding: 3em 0;
-    background-blend-mode: overlay;
-    position: relative;
-      z-index: -1;
-}
-
-
-main section:nth-of-type(7) img{
-    width: 25em;
-    height: 20em;
-}
-
-main section:nth-child(7) a{
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr ;
-    text-decoration: none;
-    
-}
-
-main section:nth-child(7) h2:nth-of-type(1){
-    color: var(--color-heading);
-    font-size: 1.375em;
-}
-
-main section:nth-child(7) section section{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2em;
-    position: sticky;
-    inset: 0;
-}
-
-
-main section:nth-child(7) section > a{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: .5rem 1.4rem .5rem 1rem;
-    border: none;
-    border-radius: 6px;
-    background-color: rgba(0, 0, 0, .2);
-    backdrop-filter: blur(10px);
-    cursor: pointer;
-    font-size: 1em;
-    color: var(--color-paragraaf);
-    width: 15em;
-    height: 3em;
-}
-
-
-main section:nth-child(7) a svg:nth-child(1){
-    fill: #fff;
-    width: 2em;
-    height: 1em;
-}
-
-
-main section:nth-child(7) ul h3{
-    grid-area: 1 / 1;
-    align-self: end;
-    padding: 1em 0.5em 0.5em;
-    z-index: 1;
-    width: 100%;
-    margin-bottom: 0.5em;
-    font-size: 2em;
-    font-weight: 700;
-    color: var(--color-heading);
-}
-
-main section:nth-child(7) ul p{
-    color: var(--color-paragraaf);
-    width: 5em;
-    grid-area: 1 / 1;
-    align-self: end;
-    padding: 0.2em 0.7em 0.2em 0.7em;
-    margin-left: 0.5em;
-    border-radius: 3px;
-    margin-bottom: 5em;
-    z-index: 1;
-    background: none;
-}
-
-main section:nth-child(7) img{
-    grid-row-start: 1;
-    grid-column-start: 1;
-    border-radius: 15px;
-    z-index: 0;
-}
-
-main section:nth-child(7) ul{
-    list-style: none;
-    display: flex;
-    scroll-snap-type: x mandatory;
-    
-}
-
-main section:nth-child(7) ul li {
-    scroll-snap-align: center;
-    padding-top: 1em;
-    padding-right: .5em;
-}
-
-@media screen and (min-width: 66em){
-    
-    main section:nth-child(7) ul{
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin: 2em;
-    }
-
-    main section:nth-child(7) ul li{
-      padding: 0;
-      padding-bottom: 0.5em;
-    }
-
-    main section:nth-child(7) img{
-        border-radius: 0px;
-    }
-
-
-    main section:nth-of-type(7) ul li:nth-of-type(1) img{
-    width: 40.5em;
-    
-    }
-
-    main section:nth-of-type(7) ul li:nth-of-type(2) img{
-        width: 20em;
-    }
-
-    main section:nth-of-type(7) ul li:nth-of-type(3) img{
-        width: 20em;
-    }
-
-    main section:nth-of-type(7) ul li:nth-of-type(4) img{
-        width: 20em;
-    }
-    
-    main section:nth-of-type(7) ul li:nth-of-type(5) img{
-        width: 20em;
-    }
-
-    main section:nth-child(7) h2:nth-of-type(1){
-        font-size: 2.5em;
-    }
-
-    
-    
-} 
-
-
-
- /* nieuw proberen */
+ /* speciaal h2 en knop */
 
  main section:nth-child(7){
     background-image: url(/images/at5-breaker-right-down.webp);
@@ -632,6 +472,7 @@ main section:nth-child(7) ul li {
 main section:nth-child(7) h2:nth-of-type(1){
     color: var(--color-heading);
     font-size: 1.375em;
+    margin-left: 1.5em;
 }
 
 main section:nth-child(7) div > a{
@@ -649,7 +490,7 @@ main section:nth-child(7) div > a{
     width: 15em;
     height: 3em;
     text-decoration: none;
-
+    margin-right: 1.5em;
 }
 
 
@@ -658,6 +499,10 @@ main section:nth-child(7) a svg:nth-child(1){
     width: 2em;
     height: 1em;
 }
+
+
+
+/* specials kaarten */
 
 main section:nth-child(7) > div{
     max-width:65rem;
@@ -668,8 +513,7 @@ main section:nth-child(7) > div{
 }
 
 main section:nth-child(7) ul {
-	margin:0;
-	padding:0;
+	margin-top: 1em;
 	list-style-type:none;
 	
 	display:flex;
@@ -680,27 +524,44 @@ main section:nth-child(7) ul {
 }
 
 main section:nth-child(7) li {
-	width:80%;
+	width:20em;
+    height: 20em;
 	flex-shrink:0;
 }
 
-main section:nth-child(7) > div li a{
+main section:nth-child(7) div li a{
     position: relative;
 }
 
-main section:nth-child(7) > div li div{
+main section:nth-child(7) div li div{
     position: absolute;
-    top: 250px;
+    top: 220px;
     left: 10px;
+
+    /* ik zet het in flex om de order te veranderen */
+    display: flex;
+    flex-direction: column;
+}
+
+main section:nth-child(7) ul div h3{
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--color-heading);
+    order: 2;
+}
+
+main section:nth-child(7) ul div p{
+    color: var(--color-paragraaf);
 }
 
 main section:nth-child(7) img {
-	width:100%;
+	width:20em;
+    height: 20em;
 	display:block;
 	border-radius:.5em;
 }
 
-@media (width > 40em) {
+@media (width > 54em) {
 	main section:nth-child(7) ul {
 		display:grid;
 		grid-template-columns:repeat(3, 1fr);

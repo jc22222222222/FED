@@ -5,12 +5,13 @@
 	box-sizing:border-box; 
 	margin: 0px; 
 	padding: 0px;
-	font-family: "accord",sans-serif;
+	font-family: "jc",sans-serif;
   }
-  
+
   @font-face {
-	  font-family: accord;
-	  src: url("/Fonts/Accord-Medium.woff") format("woff");
+	font-family: "jc";
+	font-weight:  300 800;
+	src: url("/Fonts/jc.ttf") format("truetype");
   }
   
   

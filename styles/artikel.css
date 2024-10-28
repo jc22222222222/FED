@@ -8,43 +8,6 @@
 	font-family: "accord",sans-serif;
   }
   
-  @font-face {
-	  font-family: accord;
-	  src: url("/Fonts/Accord-Medium.woff") format("woff");
-  }
-  
-  
-  
-  
-  
-  
-  /*********************/
-  /* CUSTOM PROPERTIES */
-  /*********************/
-  :root {
-	  /* lightmode */
-	  color-scheme: light dark;
-	  --color-text:#111;
-	  --color-heading: #ffffff;
-	  --color-paragraaf: #ffffff;
-	  --color-background:white;
-	  --color-backgroundnav: #ffffff;
-	  --color-backgroundlabel:#e2212a;
-	  --color-playbuttons:#e2212a;
-	  --color-backgroundspecials: #c4171d;
-	  --color-backgroundbody: #f4f4f4;
-	  --color-toggle: #c4171d;
-	  --color-themaD:#111;
-	  --color-themaA: #fff;
-	  --color-themaL: #fff;
-	  --color-themaO: #c4171d;
-	  --color-achtergrondfooterdisclaimer: #000;
-	  --color-achtergrondfooter: #1e1815;
-	  --color-linkfooter: #ffffff;
-	  --color-linknav: #000;
-	  --color-navburgermenulinks: #f4f4f4;
-      --color-fontkleurlabel: #f4f4f4;
-  }
 
 main{
     background-color: white;

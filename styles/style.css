@@ -25,25 +25,48 @@
   :root {
 	  /* lightmode */
 	  color-scheme: light dark;
-	  --color-text:#111;
-	  --color-heading: #ffffff;
-	  --color-paragraaf: #ffffff;
-	  --color-background:#eee;
-	  --color-backgroundnav: #ffffff;
-	  --color-backgroundlabel:#e2212a;
-	  --color-playbuttons:#e2212a;
-	  --color-backgroundspecials: #c4171d;
-	  --color-backgroundbody: #f4f4f4;
-	  --color-toggle: #c4171d;
-	  --color-themaD:#111;
-	  --color-themaA: #fff;
-	  --color-themaL: #fff;
-	  --color-themaO: #c4171d;
-	  --color-achtergrondfooterdisclaimer: #000;
-	  --color-achtergrondfooter: #1e1815;
-	  --color-linkfooter: #ffffff;
-	  --color-linknav: #000;
-	  --color-navburgermenulinks: #f4f4f4;
+	  /* styles */
+	  --kleur-achtergrond-body: #f4f4f4;
+	  --kleur-tip-icon: #e2212a;
+	  --kleur-achtergrond:light-dark(#eee, #323232);
+	  --kleur-navigatie:light-dark(#ffffff, #323232);
+	  --kleur-svg:light-dark(#000, #ffffff);
+	  --kleur-h1nav:light-dark(#000, #ffffff);
+	  --kleur-tekst:light-dark(#000, #ffffff);
+
+	  --kleur-navburgermenulinks: #f4f4f4;
+	  --kleur-linknav:light-dark(#000, #ffffff);
+	  
+
+	  --kleur-themaD:#111;
+	  --kleur-themaA: #fff;
+	  --kleur-themaL: #fff;
+	  --kleur-themaO: #c4171d;
+
+	  --kleur-linkfooter: #ffffff;
+	  --kleur-achtergrondfooterdisclaimer: #000;
+	  --kleur-achtergrondfooter: #1e1815;
+	  
+
+	/* Home */
+	--kleur-achtergrondspecials:light-dark(#c4171d, #121212);
+	  
+
+	  /* artikel */
+
+
+	  --kleur-h1: #ffffff;
+	  --kleur-h2: #ffffff;
+	  --kleur-h3: #ffffff;
+	  --kleur-p-label: #ffffff;
+	  --kleur-paragraaf: #ffffff;
+	  
+	  
+
+
+	  --kleur-achtergrondlabel:#e2212a;
+	  --kleur-playbuttons:#e2212a;
+	  --kleur-toggle: #c4171d;
   }
   
   
@@ -56,7 +79,7 @@
 	  position: fixed;
 	  bottom: .5rem;
 	  right: .875rem;
-	  color: #e2212a;
+	  color: var(--kleur-tip-icon);
 	  z-index: 10;
   }
   
@@ -74,7 +97,7 @@
 	  align-self: center;
 	  width: 1.6rem;
 	  height: 1.6rem;
-	  color: #e2212a;
+	  color: var(--kleur-tip-icon);
 	  z-index: 10;
 	  
   }
@@ -93,9 +116,11 @@
   }
   
   /* actueel en kijk/luister */
+
+  
   nav > a{
 	  text-decoration: none;
-	  color: var(--color-linknav);
+	  color: var(--kleur-linknav);
 	  align-self: center;
 	  margin-right: 2em;
 	  font-size: 1.2em;
@@ -124,6 +149,7 @@
   /*********************/
   nav h1{
 	  align-self: center;
+	  fill: var(--kleur-h1nav);
   }
   
   nav h1 svg ellipse{
@@ -146,8 +172,17 @@
   /****************/
   /* navigatie    */
   /****************/
+  header{
+	position: sticky;
+	inset: 0;
+	background-color: var(--kleur-navigatie);
+  }
+
   nav {
 	  order: -1;
+	  display: flex;
+	  padding: 8px 8px 8px 10px;
+	  border-bottom: 1px solid #e6e6e6;
   }
   
 	/*******************/
@@ -158,12 +193,13 @@
 	  display:flex;
 	  flex-direction: column;
 	  align-content:start;
-	  background-color: var(--color-navburgermenulinks);
+	  background-color: var(--kleur-navburgermenulinks);
 	  position: fixed;
-	  top: 5%;
+	  top: 7%;
 	  left: 0;
 	  right: 0;
 	  translate:-100%;
+	  
 	}
 
 	nav ul svg{	
@@ -198,17 +234,7 @@
 	  translate:0%;
 	  
 	}
-  header{
-	position: sticky;
-	inset: 0;
-	background-color: var(--color-backgroundnav);
-	z-index: 9;
-  }
   
-  nav{
-	  display: flex;
-	  padding: 8px 8px 8px 10px;
-  }
   
   nav button{
 	  border: none;
@@ -216,6 +242,7 @@
 	  width: 4em;
 	  font-size: 0.7em;
 	  z-index: 9999999;
+	  fill: var(--kleur-svg);
   }
   
   
@@ -278,7 +305,7 @@
 	  align-items: center;
 	  padding: .125rem;
 	  text-decoration: none;
-	  color: var(--color-text);
+	  color: var(--kleur-tekst);
   }
   
   nav section:nth-of-type(1) a:nth-of-type(1) svg {
@@ -295,6 +322,10 @@
 	  width: 1.6em;
 	  margin-right: 0.9em;
   }
+
+  nav section:nth-of-type(1) a:nth-of-type(1), a:nth-of-type(2) path {
+	fill: var(--kleur-svg);
+}
   
   @media screen and (max-width: 59.375em) {
   
@@ -304,8 +335,14 @@
 	  
   }
   
+   /****************/
+  /*    main       */
+  /****************/
   
-  
+  main{
+	background-color: var(--kleur-achtergrond);
+	z-index: -10;
+  }
  
 
   
@@ -315,7 +352,7 @@
   /*    footer    */
   /****************/
   footer{
-	  background-color: var(--color-achtergrondfooter);
+	  background-color: var(--kleur-achtergrondfooter);
 	  background-image: url(/images/at5-breaker-right-up.webp);
 	  background-position: bottom right;
 	  background-size: cover;
@@ -325,7 +362,7 @@
   
   @media  screen and (min-width: 48.125em) {
 	  footer{
-		  background-color: var(--color-achtergrondfooter);
+		  background-color: var(--kleur-achtergrondfooter);
 		  background-image:url(/images/at5-breaker-left-up.webp), url(/images/at5-breaker-right-up.webp);
 		  background-position: bottom right;
 		  background-size: cover;
@@ -394,21 +431,22 @@ footer section section:nth-of-type(1) ul{
   }
   
   footer section section:nth-of-type(1) li:nth-of-type(1) button{
-	  background-color: var(--color-themaD);
+	  background-color: var(--kleur-themaD);
   }
   
   footer section section:nth-of-type(1) li:nth-of-type(2) button{
-	  background-color: var(--color-themaA);
-	  color: var(--color-text);
+	  background-color: var(--kleur-themaA);
+	  color: black;
+
   }
   
   footer section section:nth-of-type(1) li:nth-of-type(3) button{
-	  background-color: var(--color-themaL);
-	  color: var(--color-text);
+	  background-color: var(--kleur-themaL);
+	  color: black;
   }
   
   footer section section:nth-of-type(1) li:nth-of-type(4) button{
-	  background-color: var(--color-themaO);
+	  background-color: var(--kleur-themaO);
   }
   
   footer section ul:nth-of-type(2) li{
@@ -487,11 +525,11 @@ footer section section:nth-of-type(1) ul{
 	}
 	
 	 input:checked + span {
-	  background-color: var(--color-toggle);
+	  background-color: var(--kleur-toggle);
 	}
 	
 	input:focus + span {
-	  box-shadow: 0 0 1px var(--color-toggle);
+	  box-shadow: 0 0 1px var(--kleur-toggle);
 	}
 	
 	input:checked + span:before {
@@ -562,7 +600,7 @@ footer section section:nth-of-type(1) ul{
   /* footer disclaimer */
   footer section a, footer p{
 	  text-decoration: none;
-	  color: var(--color-linkfooter);
+	  color: var(--kleur-linkfooter);
 	  opacity: .6;
 	  margin-right: 1em;
   }
@@ -572,7 +610,7 @@ footer section section:nth-of-type(1) ul{
 	  grid-column-start: 1;
 	  grid-column-end: 3;
 	  padding: 1em 0;
-	  background-color: var(--color-achtergrondfooterdisclaimer);
+	  background-color: var(--kleur-achtergrondfooterdisclaimer);
   }
   
   footer section:nth-of-type(2){

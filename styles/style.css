@@ -34,6 +34,12 @@
 	  --kleur-h1nav:light-dark(#000, #ffffff);
 	  --kleur-tekst:light-dark(#000, #ffffff);
 
+	  --kleur-h1: #ffffff;
+	  --kleur-h2: #ffffff;
+	  --kleur-h3: #ffffff;
+	  --kleur-p-label: #ffffff;
+	  --kleur-paragraaf:light-dark(#000, #ffffff);
+
 	  --kleur-navburgermenulinks: #f4f4f4;
 	  --kleur-linknav:light-dark(#000, #ffffff);
 	  
@@ -42,6 +48,7 @@
 	  --kleur-themaA: #fff;
 	  --kleur-themaL: #fff;
 	  --kleur-themaO: #c4171d;
+	  --kleur-toggle: #c4171d;
 
 	  --kleur-linkfooter: #ffffff;
 	  --kleur-achtergrondfooterdisclaimer: #000;
@@ -49,24 +56,11 @@
 	  
 
 	/* Home */
-	--kleur-achtergrondspecials:light-dark(#c4171d, #121212);
-	  
+	--kleur-achtergrondspecials:light-dark(#c4171d, #323232);
+	--kleur-achtergrondlabel:#e2212a;
 
 	  /* artikel */
-
-
-	  --kleur-h1: #ffffff;
-	  --kleur-h2: #ffffff;
-	  --kleur-h3: #ffffff;
-	  --kleur-p-label: #ffffff;
-	  --kleur-paragraaf: #ffffff;
-	  
-	  
-
-
-	  --kleur-achtergrondlabel:#e2212a;
-	  --kleur-playbuttons:#e2212a;
-	  --kleur-toggle: #c4171d;
+	  --kleur-andere-nieuws:light-dark(#f4f4f4, #323232);
   }
   
   
@@ -172,7 +166,7 @@
   /****************/
   /* navigatie    */
   /****************/
-  header{
+  body > header{
 	position: sticky;
 	inset: 0;
 	background-color: var(--kleur-navigatie);
@@ -195,7 +189,7 @@
 	  align-content:start;
 	  background-color: var(--kleur-navburgermenulinks);
 	  position: fixed;
-	  top: 7%;
+	  top: 66px;
 	  left: 0;
 	  right: 0;
 	  translate:-100%;

@@ -250,7 +250,7 @@ main section:nth-child(3) ul p{
     text-transform: uppercase;
 
     align-self: end;
-    color: var(--kleur-paragraaf);
+    color: var(--kleur-p-label);
     background-color: var(--kleur-achtergrondlabel);
     width: 4em;
     padding: 0.4em;
@@ -421,7 +421,7 @@ main section:nth-child(5) ul h3{
 }
 
 main section:nth-child(5) p{
-    color: var(--kleur-paragraaf);
+    color: var(--kleur-p-label);
     background-color: var(--kleur-achtergrondlabel);
     width: min-content;
     grid-area: 1 / 1;
@@ -483,8 +483,7 @@ main section:nth-child(5) h2:nth-child(1){
     }
 
     main section:nth-child(5){
-        padding-left: 0em;
-        padding-right: 0em;
+        padding:0 1em;
     }
 
     main section:nth-child(5) ul li{
@@ -527,7 +526,7 @@ main section:nth-child(6) button{
     border: none;
     font-size: 1em;
     background-color: var(--kleur-achtergrondlabel);
-    color: var(--kleur-paragraaf);
+    color: var(--kleur-p-label);
     text-transform: uppercase;
 }
 
@@ -629,10 +628,11 @@ main section:nth-child(7) ul div h3 {
     font-weight: 700;
     color: var(--kleur-h3);
     margin: 0; 
+    order: 2;
 }
 
 main section:nth-child(7) ul div p {
-    color: var(--kleur-paragraaf);
+    color: var(--kleur-p-label);
     margin: 0; 
 }
 
@@ -655,7 +655,7 @@ main section:nth-child(7) div > a {
     backdrop-filter: blur(10px);
     cursor: pointer;
     font-size: 1em;
-    color: var(--kleur-paragraaf);
+    color: var(--kleur-p-label);
     width: 15em;
     height: 3em;
     text-decoration: none;

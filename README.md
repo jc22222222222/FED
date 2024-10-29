@@ -56,7 +56,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+  - de meeste titels zijn H1
+  - er zitten veel errors
+  - screen reader skipt de knop actueel.
+  - at5 gebruikjt de standaard browser focus state
+
 
 </details>
 
@@ -71,10 +75,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/Frame 1.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/Untitled.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
 </details>
 
@@ -88,7 +89,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  <img src="readme-images/Scherm­afbeelding 2024-10-29 om 17.06.14.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Agenda voor meeting
@@ -107,6 +108,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Ik moet letten op de volgorde van mijn html eerst de htjes en dan de ptjes
   - meer wit ruimte tussen codes om het overzichtelijk te houden
   - ruim de code op die niet gebruikt worden.
+  - gebruik order om de h2 onder de P te krijgen
 
 </details>
 
@@ -126,18 +128,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Jean-c  1      | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | Grid uitleg    | en dit             | en ik dit    | en dan ik dat    |
+  |                | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - Inplaats van hoofdletters te typen in de html gebruik transform propperty om de tekst in hoofdletters te veranderen
-
+  - Ik liep vast met de grid maar dat is door een beetje ermee te oefenen tijdens de meeting wel gelukt
 
 </details>
 
@@ -151,7 +152,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  - ik heb de code voor de focus state toegevoegd in mijn css ookal gebruikt AT5 de standaard focus state
+  - Ik moet de skip knop voor de screen reader nog toevoegen.
+  - ik heb geen animaties in mijn ontwerp
+  voor de rest werkte alles goed
 
 </details>
 
@@ -165,26 +169,27 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  de hamburger menu maken ging wel goed maar reageerde niet als ik erop klikte.
+  <img src="readme-images/Scherm­afbeelding 2024-10-29 om 17.03.59.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | jean-c         | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | hamburger menu | en dit             | en ik dit    | en dan ik dat    |
+  | opent niet     | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Inplaats van hoofdletters te typen in de html gebruik transform propperty om de tekst in hoofdletters te veranderen
+  - de hamburger menu kon ik niet openen omdat de z-index te laag was waardoor er iets voor de knop stond.
+  - de html ziet er goed uit en is semantisch correct 
+  - snel beginnen met de tweede pagina anders ga ik het niet halen.
 
 </details>
 
@@ -202,7 +207,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  De grid was in het begin heel lastig maar na een tijde ermee te werken heb ik het wel onder controlle. Ik vond het vooral handig hoe makkelijk je kan aangeven waar je een element wilt hebben door simpel de collumn en de row aan te geven. Dat is veel handiger dan de flexbox naar mijn mening.
+  De grid was in het begin heel lastig maar na een tijde ermee te werken heb ik het wel onder controlle. Ik vond het vooral handig hoe makkelijk je kan aangeven waar je een element wilt hebben door simpel de collumn en de row aan te geven. Dat is veel handiger dan de flexbox naar mijn mening. ook was het leren van responsive design heel handig en leerzaam.
 
   <img src="readme-images/Grid.png" width="375px" alt="top">
 
@@ -227,7 +232,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. Vermeld de bronnen ook in je code.
 
   1. bron voor de toggle button: https://www.w3schools.com/howto/howto_css_switch.asp
-  2. https://www.at5.nl/
-  3. ...
+  2. https://www.at5.nl/ voor afbeeldingen, linear gradient en de svg
+  3. https://chatgpt.com voor de opasity van de linear gradient 
 
 </details>

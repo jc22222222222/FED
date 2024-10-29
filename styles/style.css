@@ -1,674 +1,633 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-	box-sizing:border-box; 
-	margin: 0px; 
-	padding: 0px;
-	font-family: "jc",sans-serif;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "jc", sans-serif;
+}
+
+@font-face {
+  font-family: "jc";
+  font-weight: 300 800;
+  src: url("/Fonts/jc.ttf") format("truetype");
+}
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+  /* lightmode */
+  color-scheme: light dark;
+  /* styles */
+  --kleur-focus-border: #2134e2;
+  --kleur-achtergrond-body: #f4f4f4;
+  --kleur-tip-icon: #e2212a;
+  --kleur-achtergrond: light-dark(#eee, #323232);
+  --kleur-navigatie: light-dark(#ffffff, #323232);
+  --kleur-svg: light-dark(#000, #ffffff);
+  --kleur-h1nav: light-dark(#000, #ffffff);
+  --kleur-tekst: light-dark(#000, #ffffff);
+
+  --kleur-h1: #ffffff;
+  --kleur-h2: #ffffff;
+  --kleur-h3: #ffffff;
+  --kleur-p-label: #ffffff;
+  --kleur-paragraaf: light-dark(#000, #ffffff);
+
+  --kleur-navburgermenulinks: #f4f4f4;
+  --kleur-linknav: light-dark(#000, #ffffff);
+
+  --kleur-themaD: #111;
+  --kleur-themaA: #fff;
+  --kleur-themaL: #fff;
+  --kleur-themaO: #c4171d;
+  --kleur-toggle: #c4171d;
+
+  --kleur-linkfooter: #ffffff;
+  --kleur-achtergrondfooterdisclaimer: #000;
+  --kleur-achtergrondfooter: #1e1815;
+
+  /* Home */
+  --kleur-achtergrondspecials: light-dark(#c4171d, #323232);
+  --kleur-achtergrondlabel: #e2212a;
+
+  /* artikel */
+  --kleur-andere-nieuws: light-dark(#f4f4f4, #323232);
+}
+
+/* tip icon */
+
+body > svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.875rem;
+  color: var(--kleur-tip-icon);
+}
+
+@media screen and (min-width: 48.125em) {
+  body > svg {
+    display: none;
+  }
+}
+
+nav > svg {
+  align-self: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  color: var(--kleur-tip-icon);
+  z-index: 10;
+}
+
+@media screen and (max-width: 48.125em) {
+  nav > svg {
+    display: none;
   }
 
-  @font-face {
-	font-family: "jc";
-	font-weight:  300 800;
-	src: url("/Fonts/jc.ttf") format("truetype");
+  /* tekst logo nav */
+  nav h1 svg:nth-of-type(1) g:nth-of-type(3) {
+    display: none;
   }
-  
-  
-  
-  
-  
-  
-  /*********************/
-  /* CUSTOM PROPERTIES */
-  /*********************/
-  :root {
-	  /* lightmode */
-	  color-scheme: light dark;
-	  /* styles */
-	  --kleur-achtergrond-body: #f4f4f4;
-	  --kleur-tip-icon: #e2212a;
-	  --kleur-achtergrond:light-dark(#eee, #323232);
-	  --kleur-navigatie:light-dark(#ffffff, #323232);
-	  --kleur-svg:light-dark(#000, #ffffff);
-	  --kleur-h1nav:light-dark(#000, #ffffff);
-	  --kleur-tekst:light-dark(#000, #ffffff);
+}
 
-	  --kleur-h1: #ffffff;
-	  --kleur-h2: #ffffff;
-	  --kleur-h3: #ffffff;
-	  --kleur-p-label: #ffffff;
-	  --kleur-paragraaf:light-dark(#000, #ffffff);
+/* actueel en kijk/luister */
 
-	  --kleur-navburgermenulinks: #f4f4f4;
-	  --kleur-linknav:light-dark(#000, #ffffff);
-	  
+nav > a {
+  text-decoration: none;
+  color: var(--kleur-linknav);
+  align-self: center;
+  margin-right: 2em;
+  font-size: 1.2em;
+  width: auto;
+  letter-spacing: 0.15em;
+}
 
-	  --kleur-themaD:#111;
-	  --kleur-themaA: #fff;
-	  --kleur-themaL: #fff;
-	  --kleur-themaO: #c4171d;
-	  --kleur-toggle: #c4171d;
+nav > a:nth-of-type(1) {
+  position: absolute;
+  left: 10em;
+}
 
-	  --kleur-linkfooter: #ffffff;
-	  --kleur-achtergrondfooterdisclaimer: #000;
-	  --kleur-achtergrondfooter: #1e1815;
-	  
+nav > a:nth-of-type(2) {
+  position: absolute;
+  left: 17em;
+}
 
-	/* Home */
-	--kleur-achtergrondspecials:light-dark(#c4171d, #323232);
-	--kleur-achtergrondlabel:#e2212a;
+/*********************/
+/* Logo AT5 Nav */
+/*********************/
+nav h1 {
+  align-self: center;
+  fill: var(--kleur-h1nav);
+}
 
-	  /* artikel */
-	  --kleur-andere-nieuws:light-dark(#f4f4f4, #323232);
+nav h1 svg ellipse {
+  box-sizing: border-box;
+  fill: #fff;
+}
+
+nav h1 svg g:nth-of-type(2) path {
+  box-sizing: border-box;
+  fill: #e2212a;
+}
+
+/****************/
+/* navigatie    */
+/****************/
+/* skip naar content knop */
+header > a{
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+body > header {
+  position: sticky;
+  inset: 0;
+  background-color: var(--kleur-navigatie);
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  padding: 8px 8px 8px 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/*******************/
+/* LIJST MET LINKS */
+/*******************/
+nav ul {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  background-color: var(--kleur-navburgermenulinks);
+  position: fixed;
+  top: 66px;
+  left: 0;
+  right: 0;
+  translate: -100%;
+}
+
+nav ul svg {
+  cursor: pointer;
+  fill: currentColor;
+  width: 1.5rem;
+  height: 1rem;
+}
+
+nav ul li {
+  padding: 0.625em;
+}
+
+nav ul li:nth-of-type(1) {
+  border-bottom: solid 0.1em white;
+}
+
+nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #636363;
+  font-size: 0.875em;
+}
+
+nav ul li a:nth-of-type(1) {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* als menu open is */
+nav.toonMenu ul {
+  translate: 0%;
+}
+
+nav button {
+  border: none;
+  background: none;
+  width: 4em;
+  font-size: 0.7em;
+  z-index: 9999999;
+  fill: var(--kleur-svg);
+}
+
+nav svg {
+  height: 1.7em;
+}
+
+h1 {
+  margin-right: auto;
+  position: relative;
+}
+
+@media screen and (min-width: 48.125em) {
+  nav button:nth-of-type(2) {
+    display: none;
   }
 
-  
-  
-  
-  /* tip icon */
-  
-  body > svg{
-	  width: 1.6rem;
-	  height: 1.6rem;
-	  position: fixed;
-	  bottom: .5rem;
-	  right: .875rem;
-	  color: var(--kleur-tip-icon);
-  }
-  
-  @media screen and (min-width: 48.125em) {
-  
-	  body > svg {
-		  display: none;
-	  }
-	  
-	  
-  }
-  
-  nav > svg{
-	  align-self: center;
-	  width: 1.6rem;
-	  height: 1.6rem;
-	  color: var(--kleur-tip-icon);
-	  z-index: 10;
-	  
-  }
-  
-  @media screen and (max-width: 48.125em) {
-  
-	  nav > svg {
-		  display: none;
-	  }
-  
-	  /* tekst logo nav */
-	  nav h1 svg:nth-of-type(1) g:nth-of-type(3){
-		  display: none;
-	  }
-	  
-  }
-  
-  /* actueel en kijk/luister */
-
-  
-  nav > a{
-	  text-decoration: none;
-	  color: var(--kleur-linknav);
-	  align-self: center;
-	  margin-right: 2em;
-	  font-size: 1.2em;
-	  width: auto;
-	  letter-spacing: .15em;
-  }
-  
-  nav > a:nth-of-type(1){
-	  position: absolute;
-	  left: 10em;
-  }
-  
-  nav > a:nth-of-type(2){
-	  position: absolute;
-	  left: 17em;
-  }
-  
-  
-  
-  
-  
-  
-  
-  /*********************/
-  /* Logo AT5 Nav */
-  /*********************/
-  nav h1{
-	  align-self: center;
-	  fill: var(--kleur-h1nav);
-  }
-  
-  nav h1 svg ellipse{
-	  box-sizing: border-box;
-	  fill: #fff;
-  }
-  
-  nav h1 svg g:nth-of-type(2) path{
-	  box-sizing: border-box;
-	  fill: #e2212a;
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  /****************/
-  /* navigatie    */
-  /****************/
-  body > header{
-	position: sticky;
-	inset: 0;
-	background-color: var(--kleur-navigatie);
-	z-index: 1;
+  nav button:nth-of-type(1) span {
+    display: none;
   }
 
   nav {
-	  display: flex;
-	  padding: 8px 8px 8px 10px;
-	  border-bottom: 1px solid #e6e6e6;
+    padding: 2em 3em;
   }
-  
-	/*******************/
-	/* LIJST MET LINKS */
-	/*******************/
-	nav ul { 
-	  margin:0; 
-	  display:flex;
-	  flex-direction: column;
-	  align-content:start;
-	  background-color: var(--kleur-navburgermenulinks);
-	  position: fixed;
-	  top: 66px;
-	  left: 0;
-	  right: 0;
-	  translate:-100%;
-	  
-	}
 
-	nav ul svg{	
-		cursor: pointer;
-		fill: currentColor;
-		width: 1.5rem;
-		height: 1rem;
-	}
-
-	nav ul li{ 
-		padding: 0.625em;
-	  }
-
-	  nav ul li:nth-of-type(1){ 
-		border-bottom: solid 0.1em white;
-	  }
-
-	  nav ul li a{ 
-		text-decoration: none;
-		text-transform: uppercase;
-		color: #636363;
-		font-size: .875em;
-	  }
-
-	  nav ul li a:nth-of-type(1){ 
-		display: flex;
-		justify-content: space-between;
-	  }
-	
-	/* als menu open is */
-	nav.toonMenu ul {
-	  translate:0%;
-	  
-	}
-  
-  
-  nav button{
-	  border: none;
-	  background: none;
-	  width: 4em;
-	  font-size: 0.7em;
-	  z-index: 9999999;
-	  fill: var(--kleur-svg);
+  nav ul {
+    display: none;
   }
-  
-  
-  nav svg{
-	  height: 1.7em;
-	  
-  }
-  
-  h1{
-	  margin-right: auto;
-	  position: relative;
-  }
-  
-  @media  screen and (min-width: 48.125em) {
-	  nav button:nth-of-type(2){
-		  display: none;
-	  }
-  
-	  nav button:nth-of-type(1) span{
-		  display: none;
-	  }
-  
-	  nav {
-		  padding: 2em 3em;
-	  }
+}
 
-	  nav ul { 
-		display: none;
-	  }
-  
-  
+@media screen and (max-width: 48.125em) {
+  nav > a {
+    display: none;
   }
-  
-  @media screen and (max-width: 48.125em) {
-  
-	  nav > a {
-		  display: none;
-	  }
-	  
-  
-  }
-  
-  
-  
-  /****************/
-  /* weer,verkeer nav */
-  /****************/
-  
-  
+}
+
+/****************/
+/* weer,verkeer nav */
+/****************/
+
+nav section:nth-of-type(1) {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.8em;
+  gap: 1em;
+}
+
+nav section:nth-of-type(1) a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.125rem;
+  text-decoration: none;
+  color: var(--kleur-tekst);
+}
+
+nav section:nth-of-type(1) a:nth-of-type(1) svg {
+  width: 1.6em;
+  margin-right: 0.9em;
+}
+
+nav section:nth-of-type(1) a:nth-of-type(2) svg {
+  width: 1.6em;
+  margin-right: 0.9em;
+}
+
+nav section:nth-of-type(1) a:nth-of-type(3) svg {
+  width: 1.6em;
+  margin-right: 0.9em;
+}
+
+nav section:nth-of-type(1) a:nth-of-type(1),
+a:nth-of-type(2) path {
+  fill: var(--kleur-svg);
+}
+
+@media screen and (max-width: 59.375em) {
   nav section:nth-of-type(1) {
-	  display: flex;
-	  justify-content: space-evenly;
-	  padding: 0.8em;
-	  gap: 1em;
+    display: none;
   }
-  
-  nav section:nth-of-type(1) a{
-	  display:flex;
-	  justify-content: center;
-	  align-items: center;
-	  padding: .125rem;
-	  text-decoration: none;
-	  color: var(--kleur-tekst);
+}
+
+/****************/
+/*    footer    */
+/****************/
+footer {
+  background-color: var(--kleur-achtergrondfooter);
+  background-image: url(/images/at5-breaker-right-up.webp);
+  background-position: bottom right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+@media screen and (min-width: 48.125em) {
+  footer {
+    background-color: var(--kleur-achtergrondfooter);
+    background-image: url(/images/at5-breaker-left-up.webp),
+      url(/images/at5-breaker-right-up.webp);
+    background-position: bottom right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
   }
+}
+
+footer section:nth-of-type(1) {
+  padding: 3em 0 0;
+  font-size: 0.875em;
+  max-width: 65rem;
+  margin: auto;
+}
+
+footer svg {
+  width: 5.5em;
+  margin: 1.5em 0;
+  padding: 0 0.75em;
+  grid-area: 1/1;
+}
+
+/* thema */
+footer section section:nth-of-type(1) {
+  display: grid;
+  align-items: center;
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  padding: 0 1em;
+  padding-right: 0;
+  margin-left: 0;
+  font-size: 1em;
+}
+
+footer section section:nth-of-type(1) p {
+  grid-area: 1/1;
+}
+
+footer section section:nth-of-type(1) ul {
+  grid-area: 1/2;
+}
+
+footer section section:nth-of-type(1) ul {
+  display: flex;
+}
+
+/* thema knoppen */
+footer section section:nth-of-type(1) button {
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0);
+  border: 0.1rem solid #fff;
+  height: 2.2rem;
+  width: 2.2rem;
+  opacity: 0.5;
+  margin: 0 0.2rem;
+  position: relative;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
+}
+
+footer section section:nth-of-type(1) li:nth-of-type(1) button {
+  background-color: var(--kleur-themaD);
+  text-transform: uppercase;
+}
+
+footer section section:nth-of-type(1) li:nth-of-type(2) button {
+  background-color: var(--kleur-themaA);
+  color: black;
+  text-transform: uppercase;
+}
+
+footer section section:nth-of-type(1) li:nth-of-type(3) button {
+  background-color: var(--kleur-themaL);
+  color: black;
+  text-transform: uppercase;
   
-  nav section:nth-of-type(1) a:nth-of-type(1) svg {
-	  width: 1.6em;
-	  margin-right: 0.9em;
-  }
-  
-  nav section:nth-of-type(1) a:nth-of-type(2) svg {
-	  width: 1.6em;
-	  margin-right: 0.9em;
-  }
-  
-  nav section:nth-of-type(1) a:nth-of-type(3) svg {
-	  width: 1.6em;
-	  margin-right: 0.9em;
+}
+
+footer section section:nth-of-type(1) li:nth-of-type(4) button {
+  background-color: var(--kleur-themaO);
+  text-transform: uppercase;
+}
+
+footer section ul:nth-of-type(2) li {
+  display: grid;
+  align-items: center;
+}
+
+footer section li {
+  margin-top: 0.6em;
+}
+
+footer section ul li p {
+  grid-area: 1/1;
+}
+
+footer section ul li label {
+  grid-area: 1/2;
+}
+
+footer section ul:nth-of-type(1) {
+  grid-area: 2/1;
+  padding: 0 1em;
+  list-style: none;
+  padding-right: 0;
+}
+
+footer section ul:nth-of-type(2) {
+  grid-row: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 0 1em;
+  list-style: none;
+  margin-top: 0.6em;
+}
+
+/* slider knop bron: https://www.w3schools.com/howto/howto_css_switch.asp */
+/* slider knop */
+footer section ul:nth-of-type(2) label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* checkbox verstoppen*/
+footer section ul:nth-of-type(2) label input {
+  opacity: 0;
+}
+
+footer section span {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 4.3em;
+}
+
+footer section ul:nth-of-type(2) span:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + span {
+  background-color: var(--kleur-toggle);
+}
+
+input:focus + span {
+  box-shadow: 0 0 1px var(--kleur-toggle);
+}
+
+input:checked + span:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* circel voor toggle*/
+footer span {
+  border-radius: 34px;
+  margin-left: 3em;
+}
+
+span:before {
+  border-radius: 50%;
+}
+
+footer section ul:nth-of-type(3) {
+  grid-area: 5/1;
+  padding: 0 1em;
+  list-style: none;
+}
+
+/* Media links */
+footer section ul:nth-of-type(4) {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 6;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  list-style: none;
+}
+
+footer section ul:nth-of-type(4) li a {
+  display: flex;
+  align-items: center;
+}
+
+/* at5 logo footer */
+footer section ul:nth-of-type(4) svg {
+  opacity: 0.6;
+  fill: #fff;
+  margin: 0.5rem 0.75rem;
+  padding: 0;
+  width: 2em;
+  height: 2em;
+}
+
+footer section svg g:nth-of-type(1) {
+  fill: #fff;
+}
+
+footer section svg ellipse {
+  box-sizing: border-box;
+  fill: #fff;
+}
+
+footer svg g:nth-of-type(2) path {
+  box-sizing: border-box;
+  fill: #e2212a;
+}
+
+/* footer disclaimer */
+footer section a,
+footer p {
+  text-decoration: none;
+  color: var(--kleur-linkfooter);
+  opacity: 0.6;
+  margin-right: 1em;
+}
+
+footer section:nth-of-type(2) {
+  grid-row-start: 7;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 1em 0;
+  background-color: var(--kleur-achtergrondfooterdisclaimer);
+}
+
+footer section:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0;
+  padding-left: 1em;
+}
+
+footer section:nth-of-type(2) a:nth-of-type(1) {
+  margin-top: 1em;
+  text-decoration-line: underline;
+}
+
+footer section:nth-of-type(2) a:nth-of-type(2) {
+  margin-top: 0.6em;
+  text-decoration-line: underline;
+}
+
+@media screen and (min-width: 48.152em) {
+  /* disclaimer */
+  footer section:nth-of-type(2) {
+    flex-direction: row;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin-top: 7.5em;
   }
 
-  nav section:nth-of-type(1) a:nth-of-type(1), a:nth-of-type(2) path {
-	fill: var(--kleur-svg);
-}
-  
-  @media screen and (max-width: 59.375em) {
-  
-	  nav section:nth-of-type(1) {
-		  display: none;
-	  }
-	  
+  footer section:nth-of-type(2) a:nth-of-type(1) {
+    margin: 0;
+    margin-left: 1em;
   }
-  
-  
-  /****************/
-  /*    footer    */
-  /****************/
-  footer{
-	  background-color: var(--kleur-achtergrondfooter);
-	  background-image: url(/images/at5-breaker-right-up.webp);
-	  background-position: bottom right;
-	  background-size: cover;
-	  background-repeat: no-repeat;
-	  background-blend-mode: overlay;
+
+  footer section:nth-of-type(2) a:nth-of-type(2) {
+    margin: 0;
+    margin-left: 1em;
   }
-  
-  @media  screen and (min-width: 48.125em) {
-	  footer{
-		  background-color: var(--kleur-achtergrondfooter);
-		  background-image:url(/images/at5-breaker-left-up.webp), url(/images/at5-breaker-right-up.webp);
-		  background-position: bottom right;
-		  background-size: cover;
-		  background-repeat: no-repeat;
-		  background-blend-mode: overlay;
-	  }
-  
+
+  /* footer links */
+  footer > section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  
-  
-  footer section:nth-of-type(1){	
-	  padding: 3em 0 0;
-	  font-size: 0.875em;
-	  max-width: 65rem;
-	  margin: auto;
+
+  footer section ul:nth-of-type(3) {
+    grid-area: 2/2;
+    padding: 0 1em;
+    list-style: none;
   }
-  
-  footer svg{
-	  width: 5.5em;
-	  margin: 1.5em 0;
-	  padding: 0 0.75em;
-	  grid-area: 1/1;
+
+  /* footer media links */
+
+  footer section ul:nth-of-type(4) {
+    grid-area: 2/3;
+    margin-right: 2em;
   }
-  
-  
+
   /* thema */
-  footer section section:nth-of-type(1){
-	display: grid;
-	  align-items: center;
-	  grid-row: 3;
-	  grid-column-start: 1;
-	  grid-column-end: 2;
-	  padding: 0 1em;
-	  padding-right: 0;
-	  margin-left: 0;
-	  font-size: 1em;
+  footer section section:nth-of-type(1) {
+    justify-content: left;
   }
-  
-  footer section section:nth-of-type(1) p{
-	grid-area: 1/1;
+
+  /* slider */
+  footer section ul:nth-of-type(2) {
+    display: flex;
+    justify-content: space-between;
+    width: 0;
+  }
+
+  footer section ul:nth-of-type(2) label {
+    margin-left: 4em;
+  }
 }
-
-footer section section:nth-of-type(1) ul{
-	grid-area: 1/2;
-}
-  
-  footer section section:nth-of-type(1) ul{
-	  display: flex;
-  }
-  
-  /* thema knoppen */
-  footer section section:nth-of-type(1) button{
-	  border-radius: 50%;
-	  color: #fff;
-	  background: rgba(0, 0, 0, 0);
-	  border: .1rem solid #fff;
-	  height: 2.2rem;
-	  width: 2.2rem;
-	  opacity: .5;
-	  margin: 0 .2rem;
-	  position: relative;
-	  font-size: 1.2rem;
-	  cursor: pointer;
-	  box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
-	  transition: transform .15s ease-in-out, opacity .15s ease-in-out;
-  }
-  
-  footer section section:nth-of-type(1) li:nth-of-type(1) button{
-	  background-color: var(--kleur-themaD);
-  }
-  
-  footer section section:nth-of-type(1) li:nth-of-type(2) button{
-	  background-color: var(--kleur-themaA);
-	  color: black;
-
-  }
-  
-  footer section section:nth-of-type(1) li:nth-of-type(3) button{
-	  background-color: var(--kleur-themaL);
-	  color: black;
-  }
-  
-  footer section section:nth-of-type(1) li:nth-of-type(4) button{
-	  background-color: var(--kleur-themaO);
-  }
-  
-  footer section ul:nth-of-type(2) li{
-	display: grid;
-	align-items: center;
-  }
-  
-  
-  footer section li{
-	margin-top: 0.6em;
-  }
-
-  footer section ul li p{
-	grid-area: 1/1;
-  }
-
-  footer section ul li label{
-	grid-area: 1/2;
-  }
-  
-  footer section ul:nth-of-type(1){
-	  grid-area: 2/1;
-	  padding: 0 1em;
-	  list-style: none;
-	  padding-right: 0;
-  }
-  
-  footer section ul:nth-of-type(2){
-	  grid-row: 4;
-	  grid-column-start: 1;
-	  grid-column-end: 3;
-	  padding: 0 1em;
-	  list-style: none;
-	  margin-top: 0.6em;
-  }
-  
-  
-  /* slider knop bron: https://www.w3schools.com/howto/howto_css_switch.asp */
-  /* slider knop */
-  footer section ul:nth-of-type(2)  label{
-	  position: relative;
-	  display: inline-block;
-	  width: 60px;
-	  height: 34px;
-	}
-	
-	/* checkbox verstoppen*/
-	footer section ul:nth-of-type(2) label input {
-	  opacity: 0;
-	}
-	
-	
-	footer section span {
-	  position: absolute;
-	  cursor: pointer;
-	  top: 0;
-	  left: 0;
-	  right: 0;
-	  bottom: 0;
-	  background-color: #ccc;
-	  -webkit-transition: .4s;
-	  transition: .4s;
-	  width: 4.3em;
-	}
-	
-	footer section ul:nth-of-type(2) span:before {
-	  position: absolute;
-	  content: "";
-	  height: 26px;
-	  width: 26px;
-	  left: 4px;
-	  bottom: 4px;
-	  background-color: white;
-	  -webkit-transition: .4s;
-	  transition: .4s;
-	}
-	
-	 input:checked + span {
-	  background-color: var(--kleur-toggle);
-	}
-	
-	input:focus + span {
-	  box-shadow: 0 0 1px var(--kleur-toggle);
-	}
-	
-	input:checked + span:before {
-	  -webkit-transform: translateX(26px);
-	  -ms-transform: translateX(26px);
-	  transform: translateX(26px);
-	}
-	
-	/* circel voor toggle*/
-	footer span {
-	  border-radius: 34px;
-	  margin-left: 3em;
-	}
-	
-	span:before {
-	  border-radius: 50%;
-	}
-  
-  footer section ul:nth-of-type(3){
-	  grid-area: 5/1;
-	  padding: 0 1em;
-	  list-style: none;
-  }
-  
-  /* Media links */
-  footer section ul:nth-of-type(4){
-	  grid-column-start: 1;
-	  grid-column-end: 4;
-	  grid-row-start: 6;
-	  display: grid;
-	  grid-template-columns: 1fr 1fr;
-	  grid-template-rows: repeat(3, 1fr);
-	  list-style: none;
-  }
-  
-  footer section ul:nth-of-type(4) li a{
-	  display: flex;
-	  align-items: center;
-  }
-  
-  /* at5 logo footer */
-  footer section ul:nth-of-type(4) svg{
-	  opacity: .6;
-	  fill: #fff;
-	  margin: .5rem .75rem;
-	  padding: 0;
-	  width: 2em;
-	  height: 2em;
-  }
-  
-  
-  footer section svg g:nth-of-type(1){
-	  fill: #fff;
-  }
-  
-  footer section svg ellipse{
-	  box-sizing: border-box;
-	  fill: #fff;
-  }
-  
-  footer svg g:nth-of-type(2) path{
-	  box-sizing: border-box;
-	  fill: #e2212a;
-  }
-  
-  
-  
-  /* footer disclaimer */
-  footer section a, footer p{
-	  text-decoration: none;
-	  color: var(--kleur-linkfooter);
-	  opacity: .6;
-	  margin-right: 1em;
-  }
-  
-  footer section:nth-of-type(2){
-	  grid-row-start: 7;
-	  grid-column-start: 1;
-	  grid-column-end: 3;
-	  padding: 1em 0;
-	  background-color: var(--kleur-achtergrondfooterdisclaimer);
-  }
-  
-  footer section:nth-of-type(2){
-	  display: flex;
-	  flex-direction: column;
-	  padding: 1em 0;
-	  padding-left: 1em;
-	  
-  }
-  
-  footer section:nth-of-type(2) a:nth-of-type(1){
-	  margin-top: 1em;
-	  text-decoration-line: underline;
-	  
-  }
-  
-  footer section:nth-of-type(2) a:nth-of-type(2){
-	  margin-top: 0.6em;
-	  text-decoration-line: underline;
-  }
-  
-  
-  @media screen and (min-width: 48.152em) {
-  
-	  
-	  /* disclaimer */
-	  footer section:nth-of-type(2){
-		  flex-direction: row;
-		  grid-column-start: 1;
-		  grid-column-end: -1;
-		  margin-top: 7.5em;
-	  }
-  
-	  footer section:nth-of-type(2) a:nth-of-type(1){
-		  margin: 0;
-		  margin-left: 1em;
-	  }
-	  
-	  footer section:nth-of-type(2) a:nth-of-type(2){
-		  margin: 0;
-		  margin-left: 1em;
-	  }
-  
-	  /* footer links */
-	  footer > section{	
-		display: grid;
-		  grid-template-columns: 1fr 1fr 1fr;
-	  }
-  
-	  footer section ul:nth-of-type(3){
-		  grid-area: 2/2;
-		  padding: 0 1em;
-		  list-style: none;
-	  }
-  
-	  /* footer media links */
-  
-	  footer section  ul:nth-of-type(4){
-		  grid-area: 2/3;
-		  margin-right: 2em;
-	  }
-  
-	  /* thema */
-	  footer section section:nth-of-type(1){
-		  justify-content: left;
-	  }
-  
-	  /* slider */
-	  footer  section ul:nth-of-type(2){
-		  display: flex;
-		  justify-content:space-between;
-		  width: 0;
-	  }
-  
-	  footer section ul:nth-of-type(2) label{
-		  margin-left: 4em;
-	  }
-
-	  
-  }

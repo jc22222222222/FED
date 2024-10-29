@@ -9,7 +9,7 @@
 
   main{
     position: relative;
-      z-index: -2;
+    z-index: -2;
   }
   
   section:first-child img{
@@ -706,4 +706,10 @@ main section:nth-child(7) a svg:nth-child(1) {
         margin-right: 0em;
     }
 }
+
+
+
+
+
+
 

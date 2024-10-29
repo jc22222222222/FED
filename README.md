@@ -107,7 +107,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Ik moet letten op de volgorde van mijn html eerst de htjes en dan de ptjes
   - meer wit ruimte tussen codes om het overzichtelijk te houden
   - ruim de code op die niet gebruikt worden.
-  - ...
 
 </details>
 
@@ -137,10 +136,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Inplaats van hoofdletters te typen in de html gebruik transform propperty om de tekst in hoofdletters te veranderen
+
 
 </details>
 
@@ -205,15 +202,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  De grid was in het begin heel lastig maar na een tijde ermee te werken heb ik het wel onder controlle. Ik vond het vooral handig hoe makkelijk je kan aangeven waar je een element wilt hebben door simpel de collumn en de row aan te geven. Dat is veel handiger dan de flexbox naar mijn mening.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/Grid.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  At5 heeft een laad meer knop waarbij de SVG 360 grade draait wanneer je hoverd erop en wanneer je weer uit hoverd dan draait het terug. Ik kreeg de eerste draai aan de praat maar het draaide bij mij niet terug. Ik heb veel geprobeerd maar ik kwam er helaas niet uit waardoor ik het opgegeven.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/hover-in-hover-out.png" width="375px" alt="bummer">
 </details>
 
 

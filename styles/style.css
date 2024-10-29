@@ -74,7 +74,6 @@
 	  bottom: .5rem;
 	  right: .875rem;
 	  color: var(--kleur-tip-icon);
-	  z-index: 10;
   }
   
   @media screen and (min-width: 48.125em) {
@@ -170,10 +169,10 @@
 	position: sticky;
 	inset: 0;
 	background-color: var(--kleur-navigatie);
+	z-index: 1;
   }
 
   nav {
-	  order: -1;
 	  display: flex;
 	  padding: 8px 8px 8px 10px;
 	  border-bottom: 1px solid #e6e6e6;
@@ -335,7 +334,6 @@
   
   main{
 	background-color: var(--kleur-achtergrond);
-	z-index: -10;
   }
  
 

@@ -19,7 +19,6 @@ main header{
     align-items: center;
     padding: 2em 1.25em 0 1.25em;
     margin: 0 0 1em;
-    z-index: 0;
     max-width: 42.5em;
     margin: auto;
 }
@@ -31,7 +30,6 @@ main header div{
     background-color: var(--kleur-achtergrondlabel);
     padding: .5em .75em;
     border-radius: 3px;
-    margin-bottom: 1em;
 }
 
 main header p{

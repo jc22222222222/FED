@@ -234,5 +234,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   1. bron voor de toggle button: https://www.w3schools.com/howto/howto_css_switch.asp
   2. https://www.at5.nl/ voor afbeeldingen, linear gradient en de svg
   3. https://chatgpt.com voor de opasity van de linear gradient 
+  4. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time voor de time element uitleg
 
 </details>

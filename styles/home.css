@@ -171,7 +171,7 @@ main section:nth-of-type(2) a:nth-of-type(3) svg {
   margin-right: 0.9em;
 }
 
-@media screen and (min-width: 59.375em) {
+@media (min-width: 59.375em) {
   main section:nth-child(2) {
     display: none;
   }
@@ -466,15 +466,17 @@ main section:nth-child(5) h2:nth-child(1) {
 /*laad meer knop*/
 /****************/
 
-main section:nth-child(6) {
+main section:nth-child(5) {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
-main section:nth-child(6) button {
+main section:nth-child(5) button {
+  width: max-content;
   cursor: pointer;
   display: flex;
   align-items: center;
+  align-self: center;
   margin: 2em;
   padding: 0.5em 1.4em 0.5em 1em;
   border-radius: 5px;
@@ -485,7 +487,7 @@ main section:nth-child(6) button {
   text-transform: uppercase;
 }
 
-main section:nth-child(6) button svg:nth-child(1) {
+main section:nth-child(5) button svg:nth-child(1) {
   fill: currentColor;
   width: 1.125em;
   height: 1.125em;
@@ -504,7 +506,7 @@ button[aria-label="draai"]:hover svg {
 /****************/
 
 /* Speciaal h2 en knop */
-main section:nth-child(7) {
+main section:nth-child(6) {
   background-image: url(/images/at5-breaker-right-down.webp);
   background-size: cover;
   background-color: var(--kleur-achtergrondspecials);
@@ -515,14 +517,14 @@ main section:nth-child(7) {
   z-index: -1;
 }
 
-main section:nth-child(7) h2:nth-of-type(1) {
+main section:nth-child(6) h2:nth-of-type(1) {
   color: var(--kleur-h2);
   font-size: 1.35em;
   margin-left: 1.5em;
 }
 
 /* Specials kaarten */
-main section:nth-child(7) > div {
+main section:nth-child(6) > div {
   max-width: 65rem;
   margin: 0 auto;
   display: grid;
@@ -530,7 +532,7 @@ main section:nth-child(7) > div {
   align-items: center;
 }
 
-main section:nth-child(7) ul {
+main section:nth-child(6) ul {
   margin-top: 1em;
   list-style-type: none;
   display: flex;
@@ -540,14 +542,14 @@ main section:nth-child(7) ul {
   padding: 2px;
 }
 
-main section:nth-child(7) li {
+main section:nth-child(6) li {
   width: 20em;
   height: 20em;
   flex-shrink: 0;
   position: relative;
 }
 
-main section:nth-child(7) li a {
+main section:nth-child(6) li a {
   display: block;
   border-radius: 0.5em;
   overflow: hidden;
@@ -555,7 +557,7 @@ main section:nth-child(7) li a {
   height: 100%;
 }
 
-main section:nth-child(7) li a::before {
+main section:nth-child(6) li a::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -566,7 +568,7 @@ main section:nth-child(7) li a::before {
   border-radius: 0.5em;
 }
 
-main section:nth-child(7) li div {
+main section:nth-child(6) li div {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -577,7 +579,7 @@ main section:nth-child(7) li div {
   z-index: 2;
 }
 
-main section:nth-child(7) ul div h3 {
+main section:nth-child(6) ul div h3 {
   font-size: 2em;
   font-weight: 700;
   color: var(--kleur-h3);
@@ -585,12 +587,12 @@ main section:nth-child(7) ul div h3 {
   order: 2;
 }
 
-main section:nth-child(7) ul div p {
+main section:nth-child(6) ul div p {
   color: var(--kleur-p-label);
   margin: 0;
 }
 
-main section:nth-child(7) img {
+main section:nth-child(6) img {
   width: 100%;
   height: 100%;
   display: block;
@@ -598,7 +600,7 @@ main section:nth-child(7) img {
   object-fit: cover;
 }
 
-main section:nth-child(7) div > a {
+main section:nth-child(6) div > a {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -609,6 +611,7 @@ main section:nth-child(7) div > a {
   backdrop-filter: blur(10px);
   cursor: pointer;
   font-size: 1em;
+  text-transform: uppercase;
   color: var(--kleur-p-label);
   width: 15em;
   height: 3em;
@@ -616,39 +619,39 @@ main section:nth-child(7) div > a {
   margin-right: 1.5em;
 }
 
-main section:nth-child(7) a svg:nth-child(1) {
+main section:nth-child(6) a svg:nth-child(1) {
   fill: #fff;
   width: 2em;
   height: 1em;
 }
 
 @media (width > 54em) {
-  main section:nth-child(7) ul {
+  main section:nth-child(6) ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 20em);
   }
 
-  main section:nth-child(7) li {
+  main section:nth-child(6) li {
     width: 100%;
   }
 
-  main section:nth-child(7) li:nth-of-type(1) {
+  main section:nth-child(6) li:nth-of-type(1) {
     grid-column: span 2;
   }
 
-  main section:nth-child(7) img {
+  main section:nth-child(6) img {
     object-fit: cover;
     border-radius: 3px;
   }
 
   /* specials */
-  main section:nth-child(7) h2:nth-of-type(1) {
+  main section:nth-child(6) h2:nth-of-type(1) {
     margin-left: 0em;
     font-size: 2.5em;
   }
 
-  main section:nth-child(7) div > a {
+  main section:nth-child(6) div > a {
     margin-right: 0em;
   }
 }

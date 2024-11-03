@@ -66,18 +66,6 @@
   --kleur-andere-nieuws: light-dark(#f4f4f4, #323232);
 }
 
-.tipicon {
-  position: fixed;
-  bottom: 0.5rem;
-  right: 0.875rem;
-
-  align-self: center;
-  width: 1.6rem;
-  height: 1.6rem;
-  color: var(--kleur-tip-icon);
-  z-index: 10;
-}
-
 .visible-element {
   display: block; 
 }
@@ -98,8 +86,25 @@ nav h1 svg:nth-of-type(1) g:nth-of-type(3) {
   display: none;
 }
 
+/* tip icoon */
+.tipicon {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.875rem;
+  padding: 12.8px;
 
-@media screen and (min-width: 48.125em) {
+  align-self: center;
+  color: var(--kleur-tip-icon);
+  z-index: 10;
+}
+
+.tipicon svg{
+  width: 1.6em;
+  height: 1.6em;
+}
+
+
+@media (min-width: 48.125em) {
   .tipicon {
     /* display: block; */
     position: static;
@@ -224,7 +229,7 @@ h1 , h1 svg{
   
 }
 
-@media screen and (min-width: 48.125em) {
+@media (min-width: 48.125em) {
   nav button:nth-of-type(2) {
     display: none;
   }
@@ -283,10 +288,7 @@ h1 , h1 svg{
 /****************/
 
 nav section:nth-of-type(1) {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 0.8em;
-  gap: 1em;
+  display: none;
 }
 
 nav section:nth-of-type(1) a {
@@ -318,9 +320,12 @@ a:nth-of-type(2) {
   fill: var(--kleur-svg);
 }
 
-@media screen and (max-width: 59.375em) {
+@media (min-width: 59.375em) {
   nav section:nth-of-type(1) {
-    display: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.8em;
+  gap: 1em;
   }
 }
 
@@ -336,7 +341,7 @@ footer {
   background-blend-mode: overlay;
 }
 
-@media screen and (min-width: 48.125em) {
+@media (min-width: 48.125em) {
   footer {
     background-color: var(--kleur-achtergrondfooter);
     background-image: url(/images/at5-breaker-left-up.webp),
@@ -605,7 +610,7 @@ footer section:nth-of-type(2) a:nth-of-type(2) {
   text-decoration-line: underline;
 }
 
-@media screen and (min-width: 48.152em) {
+@media (min-width: 48.152em) {
   /* disclaimer */
   footer section:nth-of-type(2) {
     flex-direction: row;

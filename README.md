@@ -95,12 +95,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Jean-Carlo     | Mila               | Teun         | student 4        |
+  | Jean-Carlo     | Mila               | Teun         | philene          |
   | ---            | ---                | ---          | ---              |
-  | HTML/CSS       | en dit             | en ik dit    | en dan ik dat    |
-  | Checken        | dit als er tijd is | nog een punt | dit wil ik zeker |
-  |positionabsolute| ...                | ...          | ...              |
-   grid
+  | HTML/CSS       | hoe maak je gebruik|              |                  |
+  | Checken        |van screenreader.   | afwezig      | afwezig          |
+  |positionabsolute| Github uploaden    |              |                  |
+   grid              werkt niet.
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
@@ -109,6 +109,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - meer wit ruimte tussen codes om het overzichtelijk te houden
   - ruim de code op die niet gebruikt worden.
   - gebruik order om de h2 onder de P te krijgen
+  - de screenreader vraag is uiteindelijk niet gesteld.
 
 </details>
 
@@ -152,10 +153,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  - ik heb de code voor de focus state toegevoegd in mijn css ookal gebruikt AT5 de standaard focus state
+  - ik heb de code voor de focus state toegevoegd in mijn css ookal gebruikt AT5 de standaard focus state. ik vond het nog te onduidelijk.
   - Ik moet de skip knop voor de screen reader nog toevoegen.
   - ik heb geen animaties in mijn ontwerp
   voor de rest werkte alles goed
+  - ik had op sommige secties geen heading dus die heb ik nu toegevoegd.
+  - contrast is overal goed en ik heb de dark modes toegevoegd.
+  - skip toe content knop had ik nog niet dus die heb ik ook erbij gezet.
+  alle afbeeldingen hebben een alt tekst.
 
 </details>
 
@@ -186,7 +191,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - Inplaats van hoofdletters te typen in de html gebruik transform propperty om de tekst in hoofdletters te veranderen
+  - Inplaats van hoofdletters te typen in de html gebruik text transform uppercase om de tekst in hoofdletters te veranderen
   - de hamburger menu kon ik niet openen omdat de z-index te laag was waardoor er iets voor de knop stond.
   - de html ziet er goed uit en is semantisch correct 
   - snel beginnen met de tweede pagina anders ga ik het niet halen.
@@ -203,7 +208,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/Scherm­afbeelding 2024-11-03 om 17.23.55.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
@@ -235,5 +240,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   2. https://www.at5.nl/ voor afbeeldingen, linear gradient en de svg
   3. https://chatgpt.com voor de opasity van de linear gradient 
   4. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time voor de time element uitleg
+  5. https://www.a11yproject.com/posts/how-to-hide-content/ om content te verstoppen
 
 </details>

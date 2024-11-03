@@ -218,7 +218,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit was lastig/Is niet gelukt:
-  At5 heeft een laad meer knop waarbij de SVG 360 grade draait wanneer je hoverd erop en wanneer je weer uit hoverd dan draait het terug. Ik kreeg de eerste draai aan de praat maar het draaide bij mij niet terug. Ik heb veel geprobeerd maar ik kwam er helaas niet uit waardoor ik het opgegeven.
+  At5 heeft een laad meer knop waarbij de SVG 360 grade draait wanneer je hoverd erop en wanneer je weer uit hoverd dan draait het terug. Ik kreeg de eerste draai aan de praat maar het draaide bij mij niet terug. Ik heb veel geprobeerd maar ik kwam er helaas niet uit waardoor ik het op heb gegeven.
 
   <img src="readme-images/hover-in-hover-out.png" width="375px" alt="bummer">
 </details>

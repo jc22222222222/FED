@@ -202,7 +202,8 @@ nav ul li a:nth-of-type(1) {
 }
 
 /* als menu open is */
-nav.toonMenu ul {
+nav.toonMenu ul,
+ul:focus-within {
   translate: 0%;
 }
 
